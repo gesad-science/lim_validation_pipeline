@@ -1,0 +1,1198 @@
+id,user_msg,expected_intent,expected_class,expected_attributes,expected_filter_attributes,expected_key_quantity,dataset
+1,"add student with name=anderson martins gomes, age=20",ADD,student,"{""name"": ""Anderson Martins Gomes"", ""age"": ""20""}",{},2,ORIGINAL
+2,"add subject with name=brazilian history, description=the history of brazil",ADD,subject,"{""name"": ""Brazilian History"", ""description"": ""The history of Brazil""}",{},2,ORIGINAL
+3,"add teacher with name=paulo henrique, age=65, email=ph@uece.br",ADD,teacher,"{""name"": ""Paulo Henrique"", ""age"": ""65"", ""email"": ""ph@uece.br""}",{},3,ORIGINAL
+4,"add subject with name=math, description=the best subject ever",ADD,subject,"{""name"": ""Math"", ""description"": ""The best subject ever""}",{},2,ORIGINAL
+5,"add subject with name=math, description='the best subject ever!'",ADD,subject,"{""name"": ""Math"", ""description"": ""The best subject ever!""}",{},2,ORIGINAL
+6,add student name=anderson,ADD,student,"{""name"": ""Anderson""}",{},1,ORIGINAL
+7,get students with name anderson,READ,student,{},"{""name"": ""anderson""}",1,ORIGINAL
+8,show me the teachers,READ,teacher,{},{},0,ORIGINAL
+9,show teachers,READ,teacher,{},{},0,ORIGINAL
+10,show teacher,READ,teacher,{},{},0,ORIGINAL
+11,"include outcome value 900, date is today, and description is ""adjusting the numbers""",ADD,outcome,"{""value"": ""900"", ""date"": ""today"", ""description"": ""adjusting the numbers""}",{},3,ORIGINAL
+12,get invoices,READ,invoice,{},{},0,ORIGINAL
+13,"add a test with scope=module x, date=01/01/2022, timeout = 100, limit=10",ADD,test,"{""scope"": ""Module X"", ""date"": ""01/01/2022"", ""timeout"": ""100"", ""limit"": ""10""}",{},4,ORIGINAL
+14,add a test with scope=module y and number = 8,ADD,test,"{""scope"": ""Module Y"", ""number"": ""8""}",{},2,ORIGINAL
+15,"add student with name=anderson, age=199",ADD,student,"{""name"": ""Anderson"", ""age"": ""199""}",{},2,ORIGINAL
+16,"delete student name is anderson, and age is 199",DELETE,student,{},"{""name"": ""Anderson"", ""age"": ""199""}",2,ORIGINAL
+17,"add article with title=the title, author=the author",ADD,article,"{""title"": ""The title"", ""author"": ""The author""}",{},2,ORIGINAL
+18,"update article with title ""the title"" and author ""the author"" set the title to ""the new title""",UPDATE,article,"{""title"": ""The new title""}","{""title"": ""The title"", ""author"": ""The author""}",3,ORIGINAL
+19,add article with author=anderson,ADD,article,"{""author"": ""Anderson""}",{},1,ORIGINAL
+20,"delete article when author=""anderson""",DELETE,article,{},"{""author"": ""Anderson""}",1,ORIGINAL
+21,show me the articles,READ,article,{},{},0,ORIGINAL
+22,"add article with title=the title, author=the author, abstract=the abstract, keywords=the keywords",ADD,article,"{""title"": ""The title"", ""author"": ""The author"", ""abstract"": ""The abstract"", ""keywords"": ""The keywords""}",{},4,ORIGINAL
+23,"update article with title ""the title"", setting the co-author as ""anderson gomes""",UPDATE,article,"{""co_author"": ""Anderson Gomes""}","{""title"": ""The title""}",2,ORIGINAL
+24,"update article with id=1, setting the first author as ""paulo maia""",UPDATE,article,"{""first_author"": ""Paulo Maia""}","{""id"": ""1""}",2,ORIGINAL
+25,show all students,READ,student,{},{},0,ORIGINAL
+26,view students,READ,student,{},{},0,ORIGINAL
+27,fetch the students,READ,student,{},{},0,ORIGINAL
+28,get the students,READ,student,{},{},0,ORIGINAL
+29,"for the students with name='anderson', update the name to 'anderson martins'",UPDATE,student,"{""name"": ""Anderson Martins""}","{""name"": ""Anderson""}",2,ORIGINAL
+30,please change student with name paulo update age to 30,UPDATE,student,"{""age"": ""30""}","{""name"": ""Paulo""}",2,ORIGINAL
+31,"for students with name anderson, update age to 30",UPDATE,student,"{""age"": ""30""}","{""name"": ""Anderson""}",2,ORIGINAL
+32,"for students, update age to 30",UPDATE,student,{},{},0,ORIGINAL
+33,update students,UPDATE,student,{},{},0,ORIGINAL
+34,"please, when students have the name equal to anderson, update the age to 30.",UPDATE,student,"{""age"": ""30""}","{""name"": ""Anderson""}",2,ORIGINAL
+35,update students setting the age to 42 when name is anderson,UPDATE,student,"{""age"": ""42""}","{""name"": ""Anderson""}",2,ORIGINAL
+36,update students set the age to 42 when name is anderson,UPDATE,student,"{""age"": ""42""}","{""name"": ""Anderson""}",2,ORIGINAL
+37,set students with age to 42 when name is anderson,UPDATE,student,"{""age"": ""42""}","{""name"": ""Anderson""}",2,ORIGINAL
+38,"for students with name anderson, update the age to 42",UPDATE,student,"{""age"": ""42""}","{""name"": ""Anderson""}",2,ORIGINAL
+39,please change student with name anderson update age to 30,UPDATE,student,"{""age"": ""30""}","{""name"": ""Anderson""}",2,ORIGINAL
+40,"please, change the student with name='anderson', updating the age to 30",UPDATE,student,"{""age"": ""30""}","{""name"": ""Anderson""}",2,ORIGINAL
+41,"update the age to 42, for students with name='anderson'",UPDATE,student,"{""age"": ""42""}","{""name"": ""Anderson""}",2,ORIGINAL
+42,add a student with name joseph,ADD,student,"{""name"": ""Joseph""}",{},1,ORIGINAL
+43,get students,READ,student,{},{},0,ORIGINAL
+44,add article with title 'dome: a no-code tool',ADD,article,"{""title"": ""DomE: A no-code tool""}",{},1,ORIGINAL
+45,get articles,READ,article,{},{},0,ORIGINAL
+46,"update the articles with id=1, setting the title='new title'",UPDATE,article,"{""title"": ""new title""}","{""id"": ""1""}",2,ORIGINAL
+47,"add article with title='title 2', author='rodrigo'",ADD,article,"{""title"": ""title 2"", ""author"": ""Rodrigo""}",{},2,ORIGINAL
+48,"update the articles with id=1, setting the co-author='layza'",UPDATE,article,"{""co_author"": ""Layza""}","{""id"": ""1""}",2,ORIGINAL
+49,delete the article with id=1,DELETE,article,{},"{""id"": ""1""}",1,ORIGINAL
+50,add a student with age=45,ADD,student,"{""age"": ""45""}",{},1,ORIGINAL
+51,show students,READ,student,{},{},0,ORIGINAL
+52,"include company with name=acme, address=150 coconut street",ADD,company,"{""name"": ""ACME"", ""address"": ""150 Coconut Street""}",{},2,ORIGINAL
+53,list companies,READ,company,{},{},0,ORIGINAL
+54,"add another company with name=caju enterprises, owner=anderson gomes and address=200 cumbuco street",ADD,company,"{""name"": ""Caju Enterprises"", ""owner"": ""Anderson Gomes"", ""address"": ""200 Cumbuco Street""}",{},3,ORIGINAL
+55,which company has caju in its name?,READ,company,{},"{""name"": ""caju""}",1,ORIGINAL
+56,"is there a company with ""caju"" in its name?",READ,company,{},"{""name"": ""caju""}",1,ORIGINAL
+57,delete the company whose name is acme,DELETE,company,{},"{""name"": ""ACME""}",1,ORIGINAL
+58,add a new company with name=american beauty and owner=kevin spacey,ADD,company,"{""name"": ""American Beauty"", ""owner"": ""Kevin Spacey""}",{},2,ORIGINAL
+59,list company names sorted in ascending order,READ,company,{},"{""names"": ""sorted""}",1,ORIGINAL
+60,list companies sorted by name in ascending order,READ,company,{},"{""name"": ""ascending""}",1,ORIGINAL
+61,add a new company with name=american beauty and owner=janjo chiquim,ADD,company,"{""name"": ""American Beauty"", ""owner"": ""janjo chiquim""}",{},2,ORIGINAL
+62,add a new company with name=american beauty and owner=roger rommel,ADD,company,"{""name"": ""American Beauty"", ""owner"": ""Roger Rommel""}",{},2,ORIGINAL
+63,"list companies, sort by name",READ,company,{},"{""sort"": ""by name""}",1,ORIGINAL
+64,list all companies,READ,company,{},{},0,ORIGINAL
+65,show all companies,READ,company,{},{},0,ORIGINAL
+66,add company with name=roger arrombado,ADD,company,"{""name"": ""Roger Arrombado""}",{},1,ORIGINAL
+67,get companies,READ,company,{},{},0,ORIGINAL
+68,include a company with name=mimoso construcoes,ADD,company,"{""name"": ""Mimoso Construcoes""}",{},1,ORIGINAL
+69,add article with abstract equal to 'this is a good article',ADD,article,"{""abstract"": ""this is a good article""}",{},1,ORIGINAL
+70,add an article with an abstract equal to 'this is a good article about de human history. the human narratives are around the technology evolution and it's impact on society.',ADD,article,"{""abstract"": ""this is a good article about de human history. The human narratives are around the technology evolution and it's impact on society.""}",{},1,ORIGINAL
+71,add a student with name mary,ADD,student,"{""name"": ""Mary""}",{},1,ORIGINAL
+72,"i want to add a student with name 'rodrigo', age 20 and his skin color is white",ADD,student,"{""name"": ""Rodrigo"", ""age"": ""20"", ""skin"": ""white""}",{},3,ORIGINAL
+73,"now, i want to view all students",READ,student,{},{},0,ORIGINAL
+74,i want to delete all students,DELETE,student,{},{},0,ORIGINAL
+75,delete students,DELETE,student,{},{},0,ORIGINAL
+76,delete students with id <= 4,DELETE,student,{},"{""id"": ""4""}",1,ORIGINAL
+77,delete students with idless than or equal to 4,DELETE,student,{},{},0,ORIGINAL
+78,delete students with id less than or equal to 4,DELETE,student,{},"{""id"": ""less than or equal to 4""}",1,ORIGINAL
+79,"delete students with id=1, id=2 and id=3",DELETE,student,{},{},0,ORIGINAL
+80,get students with id <4,READ,student,{},"{""id"": ""4""}",1,ORIGINAL
+81,get all students with name 'rodrigo',READ,student,{},"{""name"": ""Rodrigo""}",1,ORIGINAL
+82,"i want to change the name of a student with name 'rodrigo'. now, i want to set his name as 'rodrigo freitas'",UPDATE,student,"{""name"": ""Rodrigo Freitas""}","{""name"": ""Rodrigo""}",2,ORIGINAL
+83,delete 'update' from all students,DELETE,student,{},{},0,ORIGINAL
+84,get all students that starts with 'r',READ,student,{},{},0,ORIGINAL
+85,"add film with name ""love, rosie"" and genre ""romance""",ADD,film,"{""name"": ""love, Rosie"", ""genre"": ""romance""}",{},2,ORIGINAL
+86,show me the section film,READ,section_film,{},{},0,ORIGINAL
+87,show me film,READ,film,{},{},0,ORIGINAL
+88,"add film ""batman (2022)"" with genre=action",ADD,film,"{""genre"": ""action""}",{},1,ORIGINAL
+89,"add film with name ""batman (2022)"" and genre=action",ADD,film,"{""name"": ""Batman (2022)"", ""genre"": ""action""}",{},2,ORIGINAL
+90,"add a film with name ""avatar (2022)"" and genre=action, and another film with name=crepúsculo and genre ""drama""",ADD,film,"{""name"": ""Avatar (2022)"", ""genre"": ""action""}",{},2,ORIGINAL
+91,"add a film with name ""avatar (2022)"" and genre=action",ADD,film,"{""name"": ""Avatar (2022)"", ""genre"": ""action""}",{},2,ORIGINAL
+92,"now add film with name=crepúsculo and genre ""drama""",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+93,"add film with name=crepúsculo and genre ""drama""",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+94,"add film with name='crepúsculo' and genre ""drama""",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+95,"add film film with name='crepúsculo' and genre=""drama""",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+96,"add film with name='crepúsculo' and genre=""drama""",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+97,"add film with name ""crepúsculo"" and genre=drama",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+98,"add film with name ""crepusculo"" and genre=drama",ADD,film,"{""name"": ""Crepusculo"", ""genre"": ""Drama""}",{},2,ORIGINAL
+99,show me film where action is the genre,READ,film,{},"{""genre"": ""action""}",1,ORIGINAL
+100,show me film where genre = action,READ,film,{},"{""genre"": ""action""}",1,ORIGINAL
+101,add a student with name=anderson,ADD,student,"{""name"": ""anderson""}",{},1,ORIGINAL
+102,add a teacher with name equal to 'italo roger',ADD,teacher,"{""name"": ""Italo Roger""}",{},1,ORIGINAL
+103,get all teachers,READ,teacher,{},{},0,ORIGINAL
+104,get teachers,READ,teacher,{},{},0,ORIGINAL
+105,give me all students,READ,student,{},{},0,ORIGINAL
+106,add a former teacher with name = anderson,ADD,former_teacher,"{""name"": ""Anderson""}",{},1,ORIGINAL
+107,add a former student with name = roger,ADD,former_student,"{""name"": ""Roger""}",{},1,ORIGINAL
+108,"add a article with title=’dome: an experiment', abstract=’this
+is a cool experiment’, keywords=’dome, ai, machine learning, self-drive systems, python’, data=’2023’, first author=’anderson
+martins gomes’, co-author=’paulo henrique maia’, second author= ‘marina alves costa gomes’",ADD,article,"{""title"": ""DoME: an experiment"", ""abstract"":""this is a cool experiment"", ""keywords"": ""dome, ai, machine learning, self-drive systems, python"", ""date"":""2023"",""first_author"": ""anderson martins gomes"", ""co_author"": ""paulo henrique maia"", ""second_author"": ""marina alves costa gomes""}",{},7,ORIGINAL
+109,add a movie with name=final fantasy,ADD,film,"{""name"": ""Final Fantasy""}",{},1,ORIGINAL
+110,get movies,READ,film,{},{},0,ORIGINAL
+111,get filmes where id=3,READ,film,{},"{""id"": ""3""}",1,ORIGINAL
+112,get films,READ,film,{},{},0,ORIGINAL
+113,"update film with id=6, setting year to 2023",UPDATE,film,"{""year"": ""2023""}","{""id"": ""6""}",2,ORIGINAL
+114,add film with title=et,ADD,film,"{""title"": ""ET""}",{},1,ORIGINAL
+115,add student with name='anderson',ADD,student,"{""name"": ""anderson""}",{},1,ORIGINAL
+116,get all films,READ,film,{},{},0,ORIGINAL
+117,add a student with age=43,ADD,student,"{""age"": ""43""}",{},1,ORIGINAL
+118,get student with name=julio,READ,student,{},"{""name"": ""Julio""}",1,ORIGINAL
+119,get student with name=anderson,READ,student,{},"{""name"": ""Anderson""}",1,ORIGINAL
+120,add student with name=julio,ADD,student,"{""name"": ""Julio""}",{},1,ORIGINAL
+121,list student,READ,student,{},{},0,ORIGINAL
+122,add course with name='computer engineering',ADD,course,"{""name"": ""Computer Engineering""}",{},1,ORIGINAL
+123,list all entities,READ,entities,{},{},0,ORIGINAL
+124,get courses,READ,course,{},{},0,ORIGINAL
+125,show course,READ,course,{},{},0,ORIGINAL
+126,get the class with name=student,READ,student,{},"{""class"": ""student""}",1,ORIGINAL
+127,add student with name=abcd,ADD,student,"{""name"": ""abcd""}",{},1,ORIGINAL
+128,add student with name=abcdef,ADD,student,"{""name"": ""abcdef""}",{},1,ORIGINAL
+129,"add student with name='maria', phone=123456",ADD,student,"{""name"": ""maria"", ""phone"": ""123456""}",{},2,ORIGINAL
+130,add register with email=andersonmg@gmail.com,ADD,,{},{},0,ORIGINAL
+131,add student with name joseph,ADD,student,"{""name"": ""Joseph""}",{},1,ORIGINAL
+132,update student age=40 when id= 4,UPDATE,student,"{""age"": ""40""}","{""id"": ""4""}",2,ORIGINAL
+133,"add an article with title='dome: a reference architecture, publish year = 2023",ADD,article,"{""title"": ""DoME: A Reference Architecture"", ""publish_year"":""2023""}",{},2,ORIGINAL
+134,"add an article with title='dome: a reference architecture', and the publish year = 2023",ADD,article,"{""title"": ""DoME: A Reference Architecture"", ""publish_year"":""2023""}",{},2,ORIGINAL
+135,"add an article with title='dome: a reference architecture', and year = 2023",ADD,article,"{""title"": ""DoME: A Reference Architecture"", ""year"": ""2023""}",{},2,ORIGINAL
+136,get all articles,READ,article,{},{},0,ORIGINAL
+137,"add article with title='another article', and author='charles bronson'",ADD,article,"{""title"": ""Another Article"", ""author"": ""Charles Bronson""}",{},2,ORIGINAL
+138,show me all articles,READ,article,{},{},0,ORIGINAL
+139,"update the article with id=1, setting the author='madona'",UPDATE,article,"{""author"": ""Madona""}","{""id"": ""1""}",2,ORIGINAL
+140,i want you to show me all articles,READ,article,{},{},0,ORIGINAL
+141,"add a new article with title ""experimental demonstration of shor's quantum factoring algorithm using qubits""",ADD,article,"{""title"": ""Experimental demonstration of Shor's quantum factoring algorithm using qubits""}",{},1,ORIGINAL
+142,show all articles,READ,article,{},{},0,ORIGINAL
+143,"update article with id = 2, but now i want to set title as 'experimental demonstration of shor's quantum factoring algorithm using qubits'",UPDATE,article,"{""title"": ""Experimental demonstration of Shor's quantum factoring algorithm using qubits""}","{""id"": ""2""}",2,ORIGINAL
+144,add a new article with title 'quantum machine learning',ADD,article,"{""title"": ""Quantum Machine Learning""}",{},1,ORIGINAL
+145,show me articles,READ,article,{},{},0,ORIGINAL
+146,"update the article with id 3, but now i want to set its year=2022",UPDATE,article,"{""year"": ""2022""}","{""id"": ""3""}",2,ORIGINAL
+147,show articles,READ,article,{},{},0,ORIGINAL
+148,add a new article with title='futuro deletado,ADD,article,"{""title"": ""futuro deletado""}",{},1,ORIGINAL
+149,delete all articles with title='futuro deletado',DELETE,article,{},"{""title"": ""futuro deletado""}",1,ORIGINAL
+150,get blockages,READ,blockages,{},{},0,ORIGINAL
+151,"add a blockade with the localization ’222 road, km 13’",ADD,blockade,"{""localization"": ""222 road, km 13""}",{},1,ORIGINAL
+152,show me all blockages,READ,blockages,{},{},0,ORIGINAL
+153,show me all blockades,READ,blockade,{},{},0,ORIGINAL
+154,"add a blockade with the localization ’222 road, km 13’, and type='partial blockade'",ADD,blockade,"{""localization"": ""222 road, km 13"", ""type"": ""partial blockade""}",{},2,ORIGINAL
+155,get blockades,READ,blockade,{},{},0,ORIGINAL
+156,"add a blockade with the localization ’116 road, km 105’, and type='partial blockade'",ADD,blockade,"{""localization"": ""116 road, km 105"", ""type"": ""partial blockade""}",{},2,ORIGINAL
+157,add article with title 'shor's quantum',ADD,article,"{""title"": ""Shor's Quantum""}",{},1,ORIGINAL
+158,add a student with name='mariana alves',ADD,student,"{""name"": ""Mariana Alves""}",{},1,ORIGINAL
+159,show me all students,READ,student,{},{},0,ORIGINAL
+160,show me all aritcles,READ,aritcles,{},{},0,ORIGINAL
+161,showme all articles,READ,article,{},"{""showme"": ""all articles""}",1,ORIGINAL
+162,add an article with title='cautious adaptation of defiant components',ADD,article,"{""title"": ""Cautious Adaptation of Defiant Components""}",{},1,ORIGINAL
+163,"update the article with id=6, setting the year=2019",UPDATE,article,"{""year"": ""2019""}","{""id"": ""6""}",2,ORIGINAL
+164,retrieve articles,READ,article,{},{},0,ORIGINAL
+165,view articles,READ,article,{},{},0,ORIGINAL
+166,present me the list of articles,READ,article,{},"{""list"": ""articles""}",1,ORIGINAL
+167,delete all articles with year=2019,DELETE,article,{},"{""year"": ""2019""}",1,ORIGINAL
+168,"please, add a pokemon with name=""pikachu""",ADD,pokemon,"{""name"": ""Pikachu""}",{},1,ORIGINAL
+169,get pokemon,READ,pokemon,{},{},0,ORIGINAL
+170,"update the pokemon with name ""pikachu"" and set its type=""electric""",UPDATE,pokemon,"{""type"": ""Electric""}","{""name"": ""pikachu""}",2,ORIGINAL
+171,"update a pokemon with name=""pikachu"" by adding ""evolve_to""=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+172,"update a pokemon with name=""pikachu"" by setting ""evolve_to""=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+173,"update the pokemon with name=""pikachu"", setting ""evolve_to""=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+174,"update a pokemon with name=""pikachu"" by setting evolve_to=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+175,"update the pokemon with name=""pikachu"", setting evolve_to=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+176,"update the pokemon with name=""pikachu"", setting evolveto=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+177,"update the pokemon with name ""pikachu"", setting evolve_to=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+178,"update the pokemon with name ""pikachu"", setting evolveto=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+179,"update the pokemon with name=""pikachu"", setting the evolveto=""raichu""",UPDATE,pokemon,"{""evolveto"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+180,"update the pokemon with id=1, setting the evolveto=""raichu""",UPDATE,pokemon,"{""evolveto"": ""Raichu""}","{""id"": ""1""}",2,ORIGINAL
+181,"update the pokemon with name=""pikachu"", setting the evolution=""raichu""",UPDATE,pokemon,"{""evolution"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+182,"get pokemon with name=""pikachu""",READ,pokemon,{},"{""name"": ""Pikachu""}",1,ORIGINAL
+183,get pokemon with name pikachu,READ,pokemon,{},"{""name"": ""Pikachu""}",1,ORIGINAL
+184,"add a pokemon with name=""eevee"" and type=""normal""",ADD,pokemon,"{""name"": ""Eevee"", ""type"": ""Normal""}",{},2,ORIGINAL
+185,view pokemon,READ,pokemon,{},{},0,ORIGINAL
+186,show me all pokemon,READ,pokemon,{},{},0,ORIGINAL
+187,"delete the pokemon with name=""eevee""",DELETE,pokemon,{},"{""name"": ""Eevee""}",1,ORIGINAL
+188,get pokemons,READ,pokemon,{},{},0,ORIGINAL
+189,show me all article,READ,article,{},{},0,ORIGINAL
+190,"add an article with title ""dragonfly""",ADD,article,"{""title"": ""Dragonfly""}",{},1,ORIGINAL
+191,"update the article with id=7, setting the year=2020.",UPDATE,article,"{""year"": ""2020""}","{""id"": ""7""}",2,ORIGINAL
+192,"update the article with id=7, setting the year1=2020",UPDATE,article,"{""year1"": ""2020""}","{""id"": ""7""}",2,ORIGINAL
+193,delete all articles with year=2020,DELETE,article,{},"{""year"": ""2020""}",1,ORIGINAL
+194,"i would like to add an article named ""advances in natural language processing"" and author=julia hirschberg and christopher d. manning",ADD,article,"{""name"": ""advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG and CHRISTOPHER D. MANNING""}",{},2,ORIGINAL
+195,"add article named ""advances in natural language processing"" and author=julia hirschberg and christopher d. manning",ADD,article,"{""name"": ""advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG and CHRISTOPHER D. MANNING""}",{},2,ORIGINAL
+196,"i would like to add an article with name ""advances in natural language processing"" and author=julia hirschberg and co-author= christopher d. manning",ADD,article,"{""name"": ""Advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""CHRISTOPHER D. MANNING""}",{},3,ORIGINAL
+197,"add article with name ""advances in natural language processing"" and author=julia hirschberg and co-author= christopher d. manning",ADD,article,"{""name"": ""Advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""CHRISTOPHER D. MANNING""}",{},3,ORIGINAL
+198,"add an article with name ""advances in natural language processing"", author=julia hirschberg, co-author= christopher d. manning",ADD,article,"{""name"": ""Advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""CHRISTOPHER D. MANNING""}",{},3,ORIGINAL
+199,"add article with name ""advances in natural language processing"", author=julia hirschberg, co-author= christopher d. manning",ADD,article,"{""name"": ""Advances in natural language processing"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""CHRISTOPHER D. MANNING""}",{},3,ORIGINAL
+200,show me all authors,READ,authors,{},{},0,ORIGINAL
+201,add an article with title='dome: a reference architecture',ADD,article,"{""title"": ""DoME: A Reference Architecture""}",{},1,ORIGINAL
+202,show me article,READ,article,{},{},0,ORIGINAL
+203,update the article with id=8 setting the year=2015,UPDATE,article,"{""year"": ""2015""}","{""id"": ""8""}",2,ORIGINAL
+204,"update the article with id=8 setting name="""" and title=""advances in natural language processing""",UPDATE,article,"{""name"": """", ""title"": ""Advances in natural language processing""}",{},2,ORIGINAL
+205,"update the article with id=8 setting title=""advances in natural language processing""",UPDATE,article,"{""title"": ""Advances in natural language processing""}","{""id"": ""8""}",2,ORIGINAL
+206,show me articles with year=2015,READ,article,{},"{""year"": ""2015""}",1,ORIGINAL
+207,"update the article with id=8 setting the title=""advances in natural language processing""",UPDATE,article,"{""title"": ""Advances in natural language processing""}","{""id"": ""8""}",2,ORIGINAL
+208,show me articles where yaer=2015,READ,article,{},{},0,ORIGINAL
+209,show me articles where year=2015,READ,article,{},"{""year"": ""2015""}",1,ORIGINAL
+210,delete the attribute name  from article,DELETE,attribute,{},"{""attribute"": ""name""}",1,ORIGINAL
+211,delete name from article,DELETE,article,{},"{""name"": ""article""}",1,ORIGINAL
+212,"update the article with id=8 setting the name=""""",UPDATE,article,"{""name"": """"}","{""id"": ""8""}",2,ORIGINAL
+213,"update the article with id=8 setting the name="" """,UPDATE,article,"{""name"": "" ""}","{""id"": ""8""}",2,ORIGINAL
+214,"update the article with id=8 setting the name=a""""",UPDATE,article,"{""name"": ""a""}","{""id"": ""8""}",2,ORIGINAL
+215,update the article with id=8 setting the name=null,UPDATE,article,"{""name"": ""null""}","{""id"": ""8""}",2,ORIGINAL
+216,update the article with id=8 deleting the name,UPDATE,article,"{""name"": """"}","{""id"": ""8""}",2,ORIGINAL
+217,delete the article with id=9,DELETE,article,{},"{""id"": ""9""}",1,ORIGINAL
+218,"add a article with name ""experimental framework to simulate rescue operations after a natural disaster"" and keywords= experimental framework, simulation, benchmark",ADD,article,"{""name"": ""Experimental Framework to Simulate Rescue Operations after a Natural Disaster"", ""keywords"": ""Experimental framework, Simulation, Benchmark""}",{},2,ORIGINAL
+219,"update the article with name ""experimental framework, simulation, benchmark"" setting year=2020",UPDATE,article,"{""year"": ""2020""}","{""name"": ""Experimental framework, Simulation, Benchmark""}",2,ORIGINAL
+220,"update the article with name ""experimental framework to simulate rescue operations after a natural disaster"" setting year=2020",UPDATE,article,"{""year"": ""2020""}","{""name"": ""Experimental framework to simulate rescue operations after a natural disaster""}",2,ORIGINAL
+221,"update the article with name=""experimental framework to simulate rescue operations after a natural disaster"" setting year=2020",UPDATE,article,"{""year"": ""2020""}","{""name"": ""Experimental framework to simulate rescue operations after a natural disaster""}",2,ORIGINAL
+222,update the article with name=experimental framework to simulate rescue operations after a natural disaster setting the year=2020,UPDATE,article,"{""year"": ""2020""}","{""name"": ""Experimental framework to simulate rescue operations after a natural disaster""}",2,ORIGINAL
+223,"update the article with keywords ""experimental framework, simulation, benchmark"" setting the year=2020",UPDATE,article,"{""year"": ""2020""}","{""keywords"": ""Experimental framework, Simulation, Benchmark""}",2,ORIGINAL
+224,show me articles where year > 2013,READ,article,{},"{""year"": ""2013""}",1,ORIGINAL
+225,show me articles where year != 2015,READ,article,{},"{""year"": ""2015""}",1,ORIGINAL
+226,show articles with id > 6,READ,article,{},"{""id"": ""6""}",1,ORIGINAL
+227,show me articles with id=9,READ,article,{},"{""id"": ""9""}",1,ORIGINAL
+228,show me article where id > 6,READ,article,{},"{""id"": ""6""}",1,ORIGINAL
+229,show me article where id = 6,READ,article,{},"{""id"": ""6""}",1,ORIGINAL
+230,show me article where id=9,READ,article,{},"{""id"": ""9""}",1,ORIGINAL
+231,show me article where id=10,READ,article,{},"{""id"": ""10""}",1,ORIGINAL
+232,add city with name=fortaleza and state=ceará,ADD,city,"{""name"": ""Fortaleza"", ""state"": ""Ceará""}",{},2,ORIGINAL
+233,"add city with name=berlin, country=germany, population=3.645 million",ADD,city,"{""name"": ""Berlin"", ""country"": ""Germany"", ""population"": ""3.645 million""}",{},3,ORIGINAL
+234,show me city,READ,city,{},{},0,ORIGINAL
+235,delete all cities,DELETE,city,{},{},0,ORIGINAL
+236,delete city where id=1 and id=2,DELETE,city,{},"{""id"": ""1""}",1,ORIGINAL
+237,delete city where id-2,DELETE,city,{},{},0,ORIGINAL
+238,delete city where id=2,DELETE,city,{},"{""id"": ""2""}",1,ORIGINAL
+239,add city with name= teste and number=1,ADD,city,"{""name"": ""teste"", ""number"": ""1""}",{},2,ORIGINAL
+240,add city with name= teste and number=2,ADD,city,"{""name"": ""teste"", ""number"": ""2""}",{},2,ORIGINAL
+241,delete city where name=teste,DELETE,city,{},"{""name"": ""teste""}",1,ORIGINAL
+242,"delete city where name=""teste""",DELETE,city,{},"{""name"": ""teste""}",1,ORIGINAL
+243,delete city where number=1,DELETE,city,{},"{""number"": ""1""}",1,ORIGINAL
+244,delete all city with name=teste,DELETE,city,{},"{""name"": ""teste""}",1,ORIGINAL
+245,"delete all city with name=""teste""",DELETE,city,{},"{""name"": ""teste""}",1,ORIGINAL
+246,delete all city where number=1,DELETE,city,{},"{""number"": ""1""}",1,ORIGINAL
+247,delete city where id=4,DELETE,city,{},"{""id"": ""4""}",1,ORIGINAL
+248,delete city where name=fortaleza,DELETE,city,{},"{""name"": ""Fortaleza""}",1,ORIGINAL
+249,add city with name fortaleza and state=ceará,ADD,city,"{""name"": ""Fortaleza"", ""state"": ""Ceará""}",{},2,ORIGINAL
+250,"add city with name ""fortaleza"" and state=ceará",ADD,city,"{""name"": ""Fortaleza"", ""state"": ""Ceará""}",{},2,ORIGINAL
+251,delete city where state=ceará,DELETE,city,{},"{""state"": ""Ceará""}",1,ORIGINAL
+252,"delete city where state=""ceará""",DELETE,city,{},"{""state"": ""Ceará""}",1,ORIGINAL
+253,show pokemons,READ,pokemon,{},{},0,ORIGINAL
+254,"delete city where name=""fortaleza""",DELETE,city,{},"{""name"": ""Fortaleza""}",1,ORIGINAL
+255,show me pokemons,READ,pokemon,{},{},0,ORIGINAL
+256,get city,READ,city,{},{},0,ORIGINAL
+257,"update a pokemon with name=""pikachu"" by setting evolve to=""raichu""",UPDATE,pokemon,"{""evolve_to"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+258,delete city where id=8,DELETE,city,{},"{""id"": ""8""}",1,ORIGINAL
+259,"update a pokemon with name=""pikachu"" by setting evolvution =""raichu""",UPDATE,pokemon,"{""evolvution"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+260,delete all city where name=fortaleza,DELETE,city,{},"{""name"": ""Fortaleza""}",1,ORIGINAL
+261,"update a pokemon with name=""pikachu"" by setting evolution to=""raichu""",UPDATE,pokemon,"{""evolution"": ""Raichu""}","{""name"": ""Pikachu""}",2,ORIGINAL
+262,view all pokemons,READ,pokemon,{},{},0,ORIGINAL
+263,view the pokemon,READ,pokemon,{},{},0,ORIGINAL
+264,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author ""v-measure: a conditional entropy-based external cluster evaluation measure"", co-author ""andrew rosenberg"" and year=2007",ADD,article,"{""title"": ""V-measure: A conditional entropy-based external cluster evaluation measure"", ""author"": ""Andrew Rosenberg"", ""year"": ""2007""}",{},3,ORIGINAL
+265,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg"", co-author=""andrew rosenberg"" and year=2007",ADD,article,"{""title"": ""V-measure: A conditional entropy-based external cluster evaluation measure"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""Andrew Rosenberg"", ""year"": ""2007""}",{},4,ORIGINAL
+266,"add an article with title=""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg"", co-author=""andrew rosenberg"" , year=2007",ADD,article,"{""title"": ""V-measure: A conditional entropy-based external cluster evaluation measure"", ""author"": ""JULIA HIRSCHBERG"", ""co_author"": ""Andrew Rosenberg"", ""year"": ""2007""}",{},4,ORIGINAL
+267,"add article with title ""v-measure: a conditional entropy-based external cluster evaluation measure"", author=""julia hirschberg""",ADD,article,"{""title"": ""V-measure: A conditional entropy-based external cluster evaluation measure"", ""author"": ""JULIA HIRSCHBERG""}",{},2,ORIGINAL
+268,"update the article where title=""v-measure: a conditional entropy-based external cluster evaluation measure"" setting  co-author=""andrew rosenberg""",UPDATE,article,"{""co_author"": ""Andrew Rosenberg""}","{""title"": ""V-measure: A conditional entropy-based external cluster evaluation measure""}",2,ORIGINAL
+269,"update article with id=11 setting co-author=""andrew rosenberg"" and year=2007",UPDATE,article,"{""co_author"": ""Andrew Rosenberg"", ""year"": ""2007""}","{""id"": ""11""}",3,ORIGINAL
+270,"update article where id=11 setting co-author=""andrew rosenberg""",UPDATE,article,"{""co_author"": ""Andrew Rosenberg""}","{""id"": ""11""}",2,ORIGINAL
+271,"update the article with id=11 setting co-author=""andrew rosenberg"" and year=2007",UPDATE,article,"{""co_author"": ""Andrew Rosenberg"", ""year"": ""2007""}","{""id"": ""11""}",3,ORIGINAL
+272,"update the article with id=11 setting co-author=""andrew rosenberg""",UPDATE,article,"{""co-author"": ""ANDREW ROSENBERG""}","{""id"": ""11""}",2,ORIGINAL
+273,"update the article with id=11, setting coauthor=""andrew rosenberg""",UPDATE,article,"{""coauthor"": ""ANDREW ROSENBERG""}","{""id"": ""11""}",2,ORIGINAL
+274,"update the article with author=""julia hirschberg"", setting the year=2007",UPDATE,article,"{""year"": ""2007""}","{""author"": ""JULIA HIRSCHBERG""}",2,ORIGINAL
+275,"update the article with id=11, setting the year=2007",UPDATE,article,"{""year"": ""2007""}","{""id"": ""11""}",2,ORIGINAL
+276,"delete all articles where author=""julia hirschberg""",DELETE,article,{},"{""author"": ""JULIA HIRSCHBERG""}",1,ORIGINAL
+277,add a pokemon with name='squid',ADD,pokemon,"{""name"": ""Squid""}",{},1,ORIGINAL
+278,get all pokemons,READ,pokemon,{},{},0,ORIGINAL
+279,get student with name=itamar,READ,student,{},"{""name"": ""Itamar""}",1,ORIGINAL
+280,list all students,READ,student,{},{},0,ORIGINAL
+281,add an article with title='dome: a domesticated movie experiment',ADD,article,"{""title"": ""DoME: A Domesticated Movie Experiment""}",{},1,ORIGINAL
+282,"update the article with id=1, setting the year=3021",UPDATE,article,"{""year"": ""3021""}","{""id"": ""1""}",2,ORIGINAL
+283,show the model,READ,model,{},{},0,ORIGINAL
+284,"update all articles with year=3021, setting the author='bill gates'",UPDATE,article,"{""author"": ""Bill Gates""}","{""year"": ""3021""}",2,ORIGINAL
+285,get articles when year=3021,READ,article,{},"{""year"": ""3021""}",1,ORIGINAL
+286,add student with name='bill' and lastname='gates',ADD,student,"{""name"": ""Bill"", ""lastname"": ""Gates""}",{},2,ORIGINAL
+287,"add article with title=""dome: day of my enlightenment"" and publisher=""the matrix""",ADD,article,"{""title"": ""DoME: Day of My Enlightenment"", ""publisher"": ""The Matrix""}",{},2,ORIGINAL
+288,add an article with title='dome: day of my enlightenment' and publisher='the matrix',ADD,article,"{""title"": ""DoME: Day of My Enlightenment"", ""publisher"": ""The Matrix""}",{},2,ORIGINAL
+289,add an article with title='dome: day of my enlightenment',ADD,article,"{""title"": ""DoME: Day of My Enlightenment""}",{},1,ORIGINAL
+290,"update article with id=2, setting publisher='the matrix'",UPDATE,article,"{""publisher"": ""The Matrix""}","{""id"": ""2""}",2,ORIGINAL
+291,"update article with id=2, setting year=2222",UPDATE,article,"{""year"": ""2222""}","{""id"": ""2""}",2,ORIGINAL
+292,"update article with id=2, setting circulation=10000",UPDATE,article,"{""circulation"": ""10000""}","{""id"": ""2""}",2,ORIGINAL
+293,add student with name='daniel' and lastname='burns',ADD,student,"{""name"": ""Daniel"", ""lastname"": ""Burns""}",{},2,ORIGINAL
+294,"add goblin with title='streaming services' and text='netflix, amazon prime, disney+, star+'",ADD,goblin,"{""title"": ""Streaming services"", ""text"": ""Netflix, Amazon Prime, Disney+, Star+""}",{},2,ORIGINAL
+295,list my goblins,READ,goblins,{},{},0,ORIGINAL
+296,get goblins,READ,goblins,{},{},0,ORIGINAL
+297,get streamings,READ,streaming,{},{},0,ORIGINAL
+298,add klingon with name='gowron',ADD,klingon,"{""name"": ""gowron""}",{},1,ORIGINAL
+299,kill all klingons,DELETE,klingon,{},{},0,ORIGINAL
+300,add equipment with name = 'engine' and sector = 'generators',ADD,equipment,"{""name"": ""Engine"", ""sector"": ""Generators""}",{},2,ORIGINAL
+301,"add equipment with name = 'furnace', sector = 'metal shaping' and manager = 'anderson smith'",ADD,equipment,"{""name"": ""Furnace"", ""sector"": ""Metal shaping"", ""manager"": ""Anderson Smith""}",{},3,ORIGINAL
+302,list equipment,READ,equipment,{},{},0,ORIGINAL
+303,"list equipment, filtering by name starting with 'en'",READ,equipment,{},"{""name"": ""En""}",1,ORIGINAL
+304,"for the equipment with name = 'furnace', change manager to 'jane cooper'",UPDATE,equipment,"{""manager"": ""Jane Cooper""}","{""name"": ""Furnace""}",2,ORIGINAL
+305,please delete equipment whose sector is 'generators',DELETE,equipment,{},"{""sector"": ""Generators""}",1,ORIGINAL
+306,add person with name='chuck',ADD,person,"{""name"": ""chuck""}",{},1,ORIGINAL
+307,get all persons,READ,person,{},{},0,ORIGINAL
+308,get all person with name chuck,READ,person,{},"{""name"": ""chuck""}",1,ORIGINAL
+309,add an article with title='quantum machine learning',ADD,article,"{""title"": ""Quantum Machine Learning""}",{},1,ORIGINAL
+310,"update the article with id=1, setting the year=2021.",UPDATE,article,"{""year"": ""2021""}","{""id"": ""1""}",2,ORIGINAL
+311,delete all articles with year=2021.,DELETE,article,{},"{""year"": ""2021""}",1,ORIGINAL
+312,add show with name=paul di'anno,ADD,show,"{""name"": ""Paul Di'Anno""}",{},1,ORIGINAL
+313,show me the results,READ,results,{},{},0,ORIGINAL
+314,get all shows_,READ,show,{},{},0,ORIGINAL
+315,get the show_,READ,show,{},{},0,ORIGINAL
+316,show me all shows_,READ,show,{},{},0,ORIGINAL
+317,show me all show_,READ,show,{},{},0,ORIGINAL
+318,show me the shows_,READ,show,{},{},0,ORIGINAL
+319,show shows_,READ,show,{},{},0,ORIGINAL
+320,show students or whatever,READ,student,{},{},0,ORIGINAL
+321,add student joão daniel,ADD,student,"{""name"": ""João Daniel""}",{},1,ORIGINAL
+322,show me all shows,READ,show,{},{},0,ORIGINAL
+323,add class with name=“estrutura de dados”,ADD,class,"{""name"": ""estrutura de dados""}",{},1,ORIGINAL
+324,add student with name joão daniel,ADD,student,"{""name"": ""João Daniel""}",{},1,ORIGINAL
+325,add class with name=‘estrutura de dados’,ADD,class,"{""name"": ""estrutura de dados""}",{},1,ORIGINAL
+326,add class with name=estrutura de dados,ADD,class,"{""name"": ""estrutura de dados""}",{},1,ORIGINAL
+327,"add student with name = ""joão daniel""",ADD,student,"{""name"": ""João Daniel""}",{},1,ORIGINAL
+328,add student with name = 'joão daniel',ADD,student,"{""name"": ""João Daniel""}",{},1,ORIGINAL
+329,add student with name = 'joao daniel',ADD,student,"{""name"": ""Joao Daniel""}",{},1,ORIGINAL
+330,add student with name=‘estrutura de dados’,ADD,student,"{""name"": ""estrutura de dados""}",{},1,ORIGINAL
+331,"plese, show students",READ,student,{},{},0,ORIGINAL
+332,would you please show students,READ,student,{},{},0,ORIGINAL
+333,would you please show me students,READ,student,{},{},0,ORIGINAL
+334,would you please show me all students you have,READ,student,{},{},0,ORIGINAL
+335,delete a show with name=paul dianno,DELETE,show,{},"{""name"": ""Paul DiAnno""}",1,ORIGINAL
+336,include student with name=alinson,ADD,student,"{""name"": ""Alinson""}",{},1,ORIGINAL
+337,show me shows,READ,show,{},{},0,ORIGINAL
+338,add a show with name = paul di'anno and date = 01/27/2023,ADD,show,"{""name"": ""Paul Di'Anno"", ""date"": ""01/27/2023""}",{},2,ORIGINAL
+339,"update the article with id=4, setting the email=alinson.donato@gmail.com",UPDATE,article,"{""email"": ""alinson.donato@gmail.com""}","{""id"": ""4""}",2,ORIGINAL
+340,get student with id=4,READ,student,{},"{""id"": ""4""}",1,ORIGINAL
+341,"add show with name = renegados, and date = 01/28/2023 and place = centro cultural bnb",ADD,show,"{""name"": ""Renegados"", ""date"": ""01/28/2023"", ""place"": ""Centro Cultural BNB""}",{},3,ORIGINAL
+342,get student with email=alinson.donato@gmail.com,READ,student,{},"{""email"": ""alinson.donato@gmail.com""}",1,ORIGINAL
+343,"update the student with id=4, setting the email=alinson.donato@gmail.com",UPDATE,student,"{""email"": ""alinson.donato@gmail.com""}","{""id"": ""4""}",2,ORIGINAL
+344,"add show with name = metallica, and date = 02/30/2023 and place = castelao",ADD,show,"{""name"": ""Metallica"", ""date"": ""02/30/2023"", ""place"": ""Castelao""}",{},3,ORIGINAL
+345,add student with name=donato,ADD,student,"{""name"": ""Donato""}",{},1,ORIGINAL
+346,"add student with name=donato, email=alinson.donato@prf.gov.br",ADD,student,"{""name"": ""Donato"", ""email"": ""alinson.donato@prf.gov.br""}",{},2,ORIGINAL
+347,delete the student with email=alinson.donato@prf.gov.br,DELETE,student,{},"{""email"": ""alinson.donato@prf.gov.br""}",1,ORIGINAL
+348,update the student with name=alinson with name=alinson donato,UPDATE,student,"{""name"": ""Alinson Donato""}","{""name"": ""Alinson""}",2,ORIGINAL
+349,"create student with name="" or 1=1); drop table students; --""",ADD,student,"{""name"": ""or 1=1)"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+350,"update a show with name metallica, replace date with 10/22/2024",UPDATE,show,"{""date"": ""10/22/2024""}","{""name"": ""metallica""}",2,ORIGINAL
+351,get all shows,READ,show,{},{},0,ORIGINAL
+352,"create student with name="" or 1=1}; drop table students; --""",ADD,student,"{""name"": ""1=1"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+353,"create student with name=""' or 1=1; drop table students; --""",ADD,student,"{""name"": ""1=1"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+354,"create student with name=""' or 1=1; drop table student; --""",ADD,student,"{""name"": ""1=1"", ""table"": ""STUDENT""}",{},2,ORIGINAL
+355,"add an article with title='experimental framework, simulation, benchmark'",ADD,article,"{""title"": ""Experimental framework, Simulation, Benchmark""}",{},1,ORIGINAL
+356,create student with name=' or 1=1; drop table students; --',ADD,student,"{""name"": ""1=1"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+357,"update the article with id=1, setting the
+year=2020",UPDATE,article,"{""year"": ""2020""}","{""id"": ""1""}",2,ORIGINAL
+358,"update the article with id=2, setting the
+author='zé das couves'",UPDATE,article,"{""author"": ""Zé das Couves""}","{""id"": ""2""}",2,ORIGINAL
+359,"update the article with id=3, setting the
+year=2020",UPDATE,article,"{""year"": ""2020""}","{""id"": ""3""}",2,ORIGINAL
+360,"create student with name=""robert'); drop table students; --""",ADD,student,"{""name"": ""Robert"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+361,"create student with name=""robert' and 1=1); drop table students; --""",ADD,student,"{""name"": ""Robert"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+362,"create student with email=""alinson.donato@gmail.com' and 1=1); drop table students; --""",ADD,student,"{""email"": ""alinson.donato@gmail.com"", ""table"": ""STUDENTS""}",{},2,ORIGINAL
+363,"create student with email=""alinson.donato@gmail.com' and 1=1); drop database managedsys_web; --""",ADD,student,"{""email"": ""alinson.donato@gmail.com"", ""database"": ""MANAGEDSYS_WEB""}",{},2,ORIGINAL
+364,create student with email=amg@gmail.com,ADD,student,"{""email"": ""amg@gmail.com""}",{},1,ORIGINAL
+365,show tables,READ,tables,{},{},0,ORIGINAL
+366,add asdfud with name='john doe',ADD,,{},{},0,ORIGINAL
+367,add sku with name='john doe',ADD,sku,"{""name"": ""John Doe""}",{},1,ORIGINAL
+368,show skus,READ,sku,{},{},0,ORIGINAL
+369,add elf with name='galadriel' and type='forest',ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest""}",{},2,ORIGINAL
+370,"add elf with name='galadriel', type='forest', age='1247', ringtype='water' and power='perception'",ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest"", ""age"": ""1247"", ""ringtype"": ""Water"", ""power"": ""Perception""}",{},5,ORIGINAL
+371,"add elf with name='galadriel', type='forest', age='1247', ringtype='water', power='perception'",ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest"", ""age"": ""1247"", ""ringtype"": ""Water"", ""power"": ""Perception""}",{},5,ORIGINAL
+372,"add elf with name='galadriel', type='forest', age='1247', power='perception'",ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest"", ""age"": ""1247"", ""power"": ""Perception""}",{},4,ORIGINAL
+373,"add elf with name='galadriel', type='forest', age='1247', ring type='water' and power='perception'",ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest"", ""age"": ""1247"", ""ring"": ""type='Water' and power='Perception""}",{},4,ORIGINAL
+374,"add elf with name=galadriel, type=forest, age=1247, ringtype=water and power=perception",ADD,elf,"{""name"": ""Galadriel"", ""type"": ""Forest"", ""age"": ""1247"", ""ringtype"": ""Water"", ""power"": ""Perception""}",{},5,ORIGINAL
+375,get student with name=eliakim',READ,student,{},"{""name"": ""Eliakim""}",1,ORIGINAL
+376,include student with name=anderson,ADD,student,"{""name"": ""Anderson""}",{},1,ORIGINAL
+377,include student with name=eliakim,ADD,student,"{""name"": ""Eliakim""}",{},1,ORIGINAL
+378,list students,READ,student,{},{},0,ORIGINAL
+379,add an article with title = 'análise sobre a ausência de aula prática no ensino da disciplina de ciências biológicas',ADD,article,"{""title"": ""análise sobre a ausência de aula prática no ensino da disciplina de ciências biológicas""}",{},1,ORIGINAL
+380,add an article with title = 'crop: linking code reviews to source code changes',ADD,article,"{""title"": ""CROP: Linking Code Reviews to Source Code Changes""}",{},1,ORIGINAL
+381,"update the article with id=4, setting the year=2018",UPDATE,article,"{""year"": ""2018""}","{""id"": ""4""}",2,ORIGINAL
+382,delete all articles with year=2018.,DELETE,article,{},"{""year"": ""2018""}",1,ORIGINAL
+383,add an article with title = 'dealing with iot defiant components',ADD,article,"{""title"": ""Dealing with IoT Defiant Components""}",{},1,ORIGINAL
+384,"update the article with id=1, setting the year=2020",UPDATE,article,"{""year"": ""2020""}","{""id"": ""1""}",2,ORIGINAL
+385,"update the article with id=5, setting the author='adrilene fonseca'",UPDATE,article,"{""author"": ""Adrilene Fonseca""}","{""id"": ""5""}",2,ORIGINAL
+386,delete all articles with author=zé das couves,DELETE,article,{},"{""author"": ""Zé das Couves""}",1,ORIGINAL
+387,add an article with title='behind the intents: an in-depth empirical study on software refactoring in modern code review',ADD,article,"{""title"": ""Behind the intents: An in-depth empirical study on software refactoring in modern""}",{},1,ORIGINAL
+388,"update the article with id=6, setting the
+year=2020",UPDATE,article,"{""year"": ""2020""}","{""id"": ""6""}",2,ORIGINAL
+389,"include student with name=matheus freitas, email=fernandes.matheus@aluno.uece.br",ADD,student,"{""name"": ""Matheus Freitas"", ""email"": ""fernandes.matheus@aluno.uece.b""}",{},2,ORIGINAL
+390,show me all student,READ,student,{},{},0,ORIGINAL
+391,"add an article with title=building microservices: using an api gateway, author=chris richardson",ADD,article,"{""title"": ""Building Microservices: Using an API Gateway"", ""author"": ""Chris Richardson""}",{},2,ORIGINAL
+392,"add an article with title=introduction to microservices, author=chris richardson",ADD,article,"{""title"": ""Introduction to MIcroservices"", ""author"": ""Chris Richardson""}",{},2,ORIGINAL
+393,"update the article with id=7, setting the year=2018",UPDATE,article,"{""year"": ""2018""}","{""id"": ""7""}",2,ORIGINAL
+394,"add a subject with name=""data structures"" and professor=""ana luiza""",ADD,subject,"{""name"": ""Data Structures"", ""professor"": ""Ana Luiza""}",{},2,ORIGINAL
+395,"add a subject with name=""data structures"" and professor=""josé negreiros""",ADD,subject,"{""name"": ""Data Structures"", ""professor"": ""José Negreiros""}",{},2,ORIGINAL
+396,get subject,READ,subject,{},{},0,ORIGINAL
+397,"add a subject with name ""linear algebra"" and professor=""thelmo pontes""",ADD,subject,"{""name"": ""Linear Algebra"", ""professor"": ""Telmo Pontes""}",{},2,ORIGINAL
+398,"update the subject with name=""linear algebra"", setting professor=""thelmo pontes""",UPDATE,subject,"{""professor"": ""Thelmo Pontes""}","{""name"": ""Linear Algebra""}",2,ORIGINAL
+399,"update the subject with id=3, setting professor=""thelmo pontes""",UPDATE,subject,"{""professor"": ""Thelmo Pontes""}","{""id"": ""3""}",2,ORIGINAL
+400,"update the subject where name=""data structures"", setting semester=""2023.1""",UPDATE,subject,"{""name"": ""Data Structures""}","{""semester"": ""2023.1""}",2,ORIGINAL
+401,get subjects,READ,subject,{},{},0,ORIGINAL
+402,"update the subject with name=""data structures"", setting semester=""2023.1""",UPDATE,subject,"{""semester"": ""2023.1""}","{""name"": ""Data Structures""}",2,ORIGINAL
+403,"update the subject where name=""data structures"", settingthe semester=""2023.1""",UPDATE,subject,{},{},0,ORIGINAL
+404,"update the subject where name=""data structures"", setting the semester=""2023.1""",UPDATE,subject,"{""semester"": ""2023.1""}","{""name"": ""Data Structures""}",2,ORIGINAL
+405,"update the subject where semester=""2023.1"", setting name=""data structures""",UPDATE,subject,"{""name"": ""Data Structures""}","{""semester"": ""2023.1""}",2,ORIGINAL
+406,add a subject with name='brazilian history',ADD,subject,"{""name"": ""Brazilian History""}",{},1,ORIGINAL
+407,get all subjects,READ,subject,{},{},0,ORIGINAL
+408,"update subject with id=4, setting the main reference to 'brasil, uma história'",UPDATE,subject,"{""main_reference"": ""to 'Brasil, uma História""}","{""id"": ""4""}",2,ORIGINAL
+409,get pizzas,READ,pizza,{},{},0,ORIGINAL
+410,add a pizza with flavour='pepperoni',ADD,pizza,"{""flavour"": ""pepperoni""}",{},1,ORIGINAL
+411,show pizzas,READ,pizza,{},{},0,ORIGINAL
+412,add a ice cream with flavour=vanilla,ADD,ice_cream,"{""flavour"": ""vanilla""}",{},1,ORIGINAL
+413,show ice creams,READ,ice_cream,{},{},0,ORIGINAL
+414,show me all ice cream,READ,ice_cream,{},{},0,ORIGINAL
+415,add student with name=sergio,ADD,student,"{""name"": ""Sergio""}",{},1,ORIGINAL
+416,show me student where name=sergii,READ,student,{},"{""name"": ""sergii""}",1,ORIGINAL
+417,show me student where name=sergio,READ,student,{},"{""name"": ""Sergio""}",1,ORIGINAL
+418,show me student where name=sergio; drop students,READ,student,{},"{""name"": ""Sergio""}",1,ORIGINAL
+419,show me student where name='sergio; drop students',READ,student,{},"{""name"": ""Sergio""}",1,ORIGINAL
+420,add students where name=injection;drop students,ADD,student,"{""name"": ""Injection""}",{},1,ORIGINAL
+421,add students where name='injection;drop students',ADD,student,"{""name"": ""Injection;DROP students""}",{},1,ORIGINAL
+422,delete student name=injection,DELETE,student,{},"{""name"": ""Injection""}",1,ORIGINAL
+423,delete student name='injection;drop students;',DELETE,student,{},"{""name"": ""Injection""}",1,ORIGINAL
+424,delete student name='injection;drop students',DELETE,student,{},"{""name"": ""Injection;DROP students""}",1,ORIGINAL
+425,delete student name='--injection;drop students',DELETE,student,{},"{""name"": ""--Injection;DROP students""}",1,ORIGINAL
+426,"update the article with id=9, setting the author=darcio",UPDATE,article,"{""author"": ""Darcio""}","{""id"": ""9""}",2,ORIGINAL
+427,"update the article with id=9, setting the year=darcio",UPDATE,article,"{""year"": ""Darcio""}","{""id"": ""9""}",2,ORIGINAL
+428,"update the article with id=9, setting the year=2023",UPDATE,article,"{""year"": ""2023""}","{""id"": ""9""}",2,ORIGINAL
+429,"update the article with id=9, setting the co-author=souza",UPDATE,article,"{""co_author"": ""Souza""}","{""id"": ""9""}",2,ORIGINAL
+430,add an article with title = 'apis modernas e assincronas com python',ADD,article,"{""title"": ""APIs Modernas e Assincronas com Python""}",{},1,ORIGINAL
+431,show me all aricles,READ,,{},{},0,ORIGINAL
+432,get all entities,READ,entities,{},{},0,ORIGINAL
+433,"update the article with id=10, setting the year=2023",UPDATE,article,"{""year"": ""2023""}","{""id"": ""10""}",2,ORIGINAL
+434,delete all articles with id=8,DELETE,article,{},"{""id"": ""8""}",1,ORIGINAL
+435,"update the article with id=10, setting the author='odivon'",UPDATE,article,"{""author"": ""Odivon""}","{""id"": ""10""}",2,ORIGINAL
+436,can you save a article named “architecture guide”?,ADD,article,"{""name"": ""architecture guide""}",{},1,ORIGINAL
+437,add article great,ADD,article,{},{},0,ORIGINAL
+438,add article with description = ‘the architecture guide”,ADD,article,"{""description"": ""The Architecture Guide”""}",{},1,ORIGINAL
+439,update article id=11 set author=‘leo siebra’,UPDATE,article,"{""author"":""Leo Siebra""}","{""id"": ""11""}",2,ORIGINAL
+440,update article id=11  author=‘leo siebra’,UPDATE,article,"{""author"": ""Leo Siebra""}","{""id"": ""11""}",2,ORIGINAL
+441,get my articles,READ,article,{},{},0,ORIGINAL
+442,add a product type=book,ADD,product,"{""type"": ""book""}",{},1,ORIGINAL
+443,get products,READ,product,{},{},0,ORIGINAL
+444,show article id=2,READ,article,{},"{""id"": ""2""}",1,ORIGINAL
+445,show article where id=5,READ,article,{},"{""id"": ""5""}",1,ORIGINAL
+446,show article where id=1,READ,article,{},"{""id"": ""1""}",1,ORIGINAL
+447,"update article with id=11, setting the author=leo siebra",UPDATE,article,"{""author"": ""Leo Siebra""}","{""id"": ""11""}",2,ORIGINAL
+448,show me the article with id=11,READ,article,{},"{""id"": ""11""}",1,ORIGINAL
+449,"please add a article with title='attention is all you need', year=2022, author=""alex nogueira"", keywords=['attention']",ADD,article,"{""title"": ""Attention is all you need"", ""year"": ""2022"", ""author"": ""Alex Nogueira"", ""keywords"": ""Attention""}",{},4,ORIGINAL
+450,"add article with title='attention is all you need', year=2022, author=""alex nogueira"", keywords=['attention']",ADD,article,"{""title"": ""Attention is all you need"", ""year"": ""2022"", ""author"": ""Alex Nogueira"", ""keywords"": ""Attention""}",{},4,ORIGINAL
+451,"update article with id=12, setting revision=1",UPDATE,article,"{""revision"": ""1""}","{""id"": ""12""}",2,ORIGINAL
+452,add a movie with title='batman begins',ADD,film,"{""title"": ""Batman Begins""}",{},1,ORIGINAL
+453,"add a movie with title='the dark knight', ""running time""=152",ADD,film,"{""title"": ""The Dark Knight"", ""running_time"": ""152""}",{},2,ORIGINAL
+454,get all students with name='anderson',READ,student,{},"{""name"": ""Anderson""}",1,ORIGINAL
+455,add a former teacher with name='onelia',ADD,former_teacher,"{""name"": ""Onelia""}",{},1,ORIGINAL
+456,add an invoice with value=100,ADD,invoice,"{""value"": ""100""}",{},1,ORIGINAL
+457,get all invoice,READ,invoice,{},{},0,ORIGINAL
+458,add car with license=2020,ADD,car,"{""license"": ""2020""}",{},1,ORIGINAL
+459,add car with color=black,ADD,car,"{""color"": ""black""}",{},1,ORIGINAL
+460,get all cars,READ,car,{},{},0,ORIGINAL
+461,"add course with name=Physics I, code=PHY101",ADD,course,"{""name"": ""Physics I"", ""code"": ""PHY101""}",{},2,SYNTHETIC
+462,delete course with code=PHY101,DELETE,course,{},"{""code"": ""PHY101""}",1,SYNTHETIC
+463,"update course with code=PHY101, set name=Applied Physics",UPDATE,course,"{""name"": ""Applied Physics""}","{""code"": ""PHY101""}",2,SYNTHETIC
+464,"add book with title=The Great Novel, author=Jane Doe",ADD,book,"{""title"": ""The Great Novel"", ""author"": ""Jane Doe""}",{},2,SYNTHETIC
+465,get books by Jane Doe,READ,book,{},"{""author"": ""Jane Doe""}",1,SYNTHETIC
+466,delete book with title=The Great Novel,DELETE,book,{},"{""title"": ""The Great Novel""}",1,SYNTHETIC
+467,"update book with title=The Great Novel, set publication_year=2023",UPDATE,book,"{""publication_year"": ""2023""}","{""title"": ""The Great Novel""}",2,SYNTHETIC
+468,"add employee with name=John Smith, department=Sales",ADD,employee,"{""name"": ""John Smith"", ""department"": ""Sales""}",{},2,SYNTHETIC
+469,show employees in Sales department,READ,employee,{},"{""department"": ""Sales""}",1,SYNTHETIC
+470,delete employee named John Smith,DELETE,employee,{},"{""name"": ""John Smith""}",1,SYNTHETIC
+471,"update employee John Smith, change department to Marketing",UPDATE,employee,"{""department"": ""Marketing""}","{""name"": ""John Smith""}",2,SYNTHETIC
+472,"add product with name=Laptop, price=1200",ADD,product,"{""name"": ""Laptop"", ""price"": ""1200""}",{},2,SYNTHETIC
+473,get products under 500,READ,product,{},"{""price"": ""<500""}",1,SYNTHETIC
+474,delete product Laptop,DELETE,product,{},"{""name"": ""Laptop""}",1,SYNTHETIC
+475,"update product Laptop, set price=1100",UPDATE,product,"{""price"": ""1100""}","{""name"": ""Laptop""}",2,SYNTHETIC
+476,add customer with email=test@example.com,ADD,customer,"{""email"": ""test@example.com""}",{},1,SYNTHETIC
+477,show customers from USA,READ,customer,{},"{""country"": ""USA""}",1,SYNTHETIC
+478,delete customer with email=test@example.com,DELETE,customer,{},"{""email"": ""test@example.com""}",1,SYNTHETIC
+479,"update customer test@example.com, set phone=123-456-7890",UPDATE,customer,"{""phone"": ""123-456-7890""}","{""email"": ""test@example.com""}",2,SYNTHETIC
+480,"add order with item=Pen, quantity=10",ADD,order,"{""item"": ""Pen"", ""quantity"": ""10""}",{},2,SYNTHETIC
+481,get orders from last week,READ,order,{},"{""date"": ""last week""}",1,SYNTHETIC
+482,delete order for Pen,DELETE,order,{},"{""item"": ""Pen""}",1,SYNTHETIC
+483,"update order for Pen, change quantity to 15",UPDATE,order,"{""quantity"": ""15""}","{""item"": ""Pen""}",2,SYNTHETIC
+484,"add project with name=Alpha, status=ongoing",ADD,project,"{""name"": ""Alpha"", ""status"": ""ongoing""}",{},2,SYNTHETIC
+485,show completed projects,READ,project,{},"{""status"": ""completed""}",1,SYNTHETIC
+486,delete project Alpha,DELETE,project,{},"{""name"": ""Alpha""}",1,SYNTHETIC
+487,"update project Alpha, set status=completed",UPDATE,project,"{""status"": ""completed""}","{""name"": ""Alpha""}",2,SYNTHETIC
+488,"add task with description=Write report, deadline=tomorrow",ADD,task,"{""description"": ""Write report"", ""deadline"": ""tomorrow""}",{},2,SYNTHETIC
+489,get overdue tasks,READ,task,{},"{""status"": ""overdue""}",1,SYNTHETIC
+490,delete task Write report,DELETE,task,{},"{""description"": ""Write report""}",1,SYNTHETIC
+491,"update task Write report, set status=done",UPDATE,task,"{""status"": ""done""}","{""description"": ""Write report""}",2,SYNTHETIC
+492,"add event with name=Meeting, date=2025-07-01",ADD,event,"{""name"": ""Meeting"", ""date"": ""2025-07-01""}",{},2,SYNTHETIC
+493,show events for July,READ,event,{},"{""month"": ""July""}",1,SYNTHETIC
+494,delete event Meeting,DELETE,event,{},"{""name"": ""Meeting""}",1,SYNTHETIC
+495,"update event Meeting, set time=10:00 AM",UPDATE,event,"{""time"": ""10:00 AM""}","{""name"": ""Meeting""}",2,SYNTHETIC
+496,"add feedback with rating=5, comment=Excellent service",ADD,feedback,"{""rating"": ""5"", ""comment"": ""Excellent service""}",{},2,SYNTHETIC
+497,get feedback with rating 5,READ,feedback,{},"{""rating"": ""5""}",1,SYNTHETIC
+498,delete feedback with comment 'Excellent service',DELETE,feedback,{},"{""comment"": ""Excellent service""}",1,SYNTHETIC
+499,"update feedback with rating 5, set comment='Very good service'",UPDATE,feedback,"{""comment"": ""Very good service""}","{""rating"": ""5""}",2,SYNTHETIC
+500,"add user with username=alice, password=pass123",ADD,user,"{""username"": ""alice"", ""password"": ""pass123""}",{},2,SYNTHETIC
+501,delete user alice,DELETE,user,{},"{""username"": ""alice""}",1,SYNTHETIC
+502,"update user alice, set email=alice@example.com",UPDATE,user,"{""email"": ""alice@example.com""}","{""username"": ""alice""}",2,SYNTHETIC
+503,"add report with title=Monthly Sales, type=financial",ADD,report,"{""title"": ""Monthly Sales"", ""type"": ""financial""}",{},2,SYNTHETIC
+504,get financial reports,READ,report,{},"{""type"": ""financial""}",1,SYNTHETIC
+505,delete report Monthly Sales,DELETE,report,{},"{""title"": ""Monthly Sales""}",1,SYNTHETIC
+506,"update report Monthly Sales, set author=Bob",UPDATE,report,"{""author"": ""Bob""}","{""title"": ""Monthly Sales""}",2,SYNTHETIC
+507,"add document with name=Proposal, format=PDF",ADD,document,"{""name"": ""Proposal"", ""format"": ""PDF""}",{},2,SYNTHETIC
+508,show PDF documents,READ,document,{},"{""format"": ""PDF""}",1,SYNTHETIC
+509,delete document Proposal,DELETE,document,{},"{""name"": ""Proposal""}",1,SYNTHETIC
+510,"update document Proposal, set size=5MB",UPDATE,document,"{""size"": ""5MB""}","{""name"": ""Proposal""}",2,SYNTHETIC
+511,"add movie with title=Inception, director=Christopher Nolan",ADD,movie,"{""title"": ""Inception"", ""director"": ""Christopher Nolan""}",{},2,SYNTHETIC
+512,get movies by Christopher Nolan,READ,movie,{},"{""director"": ""Christopher Nolan""}",1,SYNTHETIC
+513,delete movie Inception,DELETE,movie,{},"{""title"": ""Inception""}",1,SYNTHETIC
+514,"update movie Inception, set release_year=2010",UPDATE,movie,"{""release_year"": ""2010""}","{""title"": ""Inception""}",2,SYNTHETIC
+515,"add song with title=Bohemian Rhapsody, artist=Queen",ADD,song,"{""title"": ""Bohemian Rhapsody"", ""artist"": ""Queen""}",{},2,SYNTHETIC
+516,show songs by Queen,READ,song,{},"{""artist"": ""Queen""}",1,SYNTHETIC
+517,delete song Bohemian Rhapsody,DELETE,song,{},"{""title"": ""Bohemian Rhapsody""}",1,SYNTHETIC
+518,"update song Bohemian Rhapsody, set genre=Rock",UPDATE,song,"{""genre"": ""Rock""}","{""title"": ""Bohemian Rhapsody""}",2,SYNTHETIC
+519,"add album with title=Thriller, artist=Michael Jackson",ADD,album,"{""title"": ""Thriller"", ""artist"": ""Michael Jackson""}",{},2,SYNTHETIC
+520,get albums by Michael Jackson,READ,album,{},"{""artist"": ""Michael Jackson""}",1,SYNTHETIC
+521,delete album Thriller,DELETE,album,{},"{""title"": ""Thriller""}",1,SYNTHETIC
+522,"update album Thriller, set year=1982",UPDATE,album,"{""year"": ""1982""}","{""title"": ""Thriller""}",2,SYNTHETIC
+523,"add playlist with name=Workout Mix, creator=Me",ADD,playlist,"{""name"": ""Workout Mix"", ""creator"": ""Me""}",{},2,SYNTHETIC
+524,show playlists created by Me,READ,playlist,{},"{""creator"": ""Me""}",1,SYNTHETIC
+525,delete playlist Workout Mix,DELETE,playlist,{},"{""name"": ""Workout Mix""}",1,SYNTHETIC
+526,"update playlist Workout Mix, add song='Eye of the Tiger'",UPDATE,playlist,"{""song"": ""Eye of the Tiger""}","{""name"": ""Workout Mix""}",2,SYNTHETIC
+527,"add podcast with title=The Daily, host=Michael Barbaro",ADD,podcast,"{""title"": ""The Daily"", ""host"": ""Michael Barbaro""}",{},2,SYNTHETIC
+528,get podcasts by Michael Barbaro,READ,podcast,{},"{""host"": ""Michael Barbaro""}",1,SYNTHETIC
+529,delete podcast The Daily,DELETE,podcast,{},"{""title"": ""The Daily""}",1,SYNTHETIC
+530,"update podcast The Daily, set genre=News",UPDATE,podcast,"{""genre"": ""News""}","{""title"": ""The Daily""}",2,SYNTHETIC
+531,"add recipe with name=Spaghetti Carbonara, cuisine=Italian",ADD,recipe,"{""name"": ""Spaghetti Carbonara"", ""cuisine"": ""Italian""}",{},2,SYNTHETIC
+532,show Italian recipes,READ,recipe,{},"{""cuisine"": ""Italian""}",1,SYNTHETIC
+533,delete recipe Spaghetti Carbonara,DELETE,recipe,{},"{""name"": ""Spaghetti Carbonara""}",1,SYNTHETIC
+534,"update recipe Spaghetti Carbonara, set prep_time=30 minutes",UPDATE,recipe,"{""prep_time"": ""30 minutes""}","{""name"": ""Spaghetti Carbonara""}",2,SYNTHETIC
+535,"add ingredient with name=Tomato, quantity=2",ADD,ingredient,"{""name"": ""Tomato"", ""quantity"": ""2""}",{},2,SYNTHETIC
+536,get ingredients needed for pizza,READ,ingredient,{},"{""for_recipe"": ""pizza""}",1,SYNTHETIC
+537,delete ingredient Tomato,DELETE,ingredient,{},"{""name"": ""Tomato""}",1,SYNTHETIC
+538,"update ingredient Tomato, set unit=kg",UPDATE,ingredient,"{""unit"": ""kg""}","{""name"": ""Tomato""}",2,SYNTHETIC
+539,"add restaurant with name=The Bistro, type=French",ADD,restaurant,"{""name"": ""The Bistro"", ""type"": ""French""}",{},2,SYNTHETIC
+540,show French restaurants,READ,restaurant,{},"{""type"": ""French""}",1,SYNTHETIC
+541,delete restaurant The Bistro,DELETE,restaurant,{},"{""name"": ""The Bistro""}",1,SYNTHETIC
+542,"update restaurant The Bistro, set rating=4.5",UPDATE,restaurant,"{""rating"": ""4.5""}","{""name"": ""The Bistro""}",2,SYNTHETIC
+543,"add car with make=Honda, model=Civic",ADD,car,"{""make"": ""Honda"", ""model"": ""Civic""}",{},2,SYNTHETIC
+544,get Honda cars,READ,car,{},"{""make"": ""Honda""}",1,SYNTHETIC
+545,delete car Honda Civic,DELETE,car,{},"{""make"": ""Honda"", ""model"": ""Civic""}",2,SYNTHETIC
+546,"update car Honda Civic, set year=2020",UPDATE,car,"{""year"": ""2020""}","{""make"": ""Honda"", ""model"": ""Civic""}",3,SYNTHETIC
+547,"add house with address=123 Main St, bedrooms=3",ADD,house,"{""address"": ""123 Main St"", ""bedrooms"": ""3""}",{},2,SYNTHETIC
+548,show houses with 4 bedrooms,READ,house,{},"{""bedrooms"": ""4""}",1,SYNTHETIC
+549,delete house at 123 Main St,DELETE,house,{},"{""address"": ""123 Main St""}",1,SYNTHETIC
+550,"update house at 123 Main St, set price=300000",UPDATE,house,"{""price"": ""300000""}","{""address"": ""123 Main St""}",2,SYNTHETIC
+551,"add pet with name=Buddy, species=dog",ADD,pet,"{""name"": ""Buddy"", ""species"": ""dog""}",{},2,SYNTHETIC
+552,get all dogs,READ,pet,{},"{""species"": ""dog""}",1,SYNTHETIC
+553,delete pet Buddy,DELETE,pet,{},"{""name"": ""Buddy""}",1,SYNTHETIC
+554,"update pet Buddy, set age=5",UPDATE,pet,"{""age"": ""5""}","{""name"": ""Buddy""}",2,SYNTHETIC
+555,"add plant with name=Rose, type=flower",ADD,plant,"{""name"": ""Rose"", ""type"": ""flower""}",{},2,SYNTHETIC
+556,show all flowers,READ,plant,{},"{""type"": ""flower""}",1,SYNTHETIC
+557,delete plant Rose,DELETE,plant,{},"{""name"": ""Rose""}",1,SYNTHETIC
+558,"update plant Rose, set color=red",UPDATE,plant,"{""color"": ""red""}","{""name"": ""Rose""}",2,SYNTHETIC
+559,"add computer with brand=Dell, model=XPS",ADD,computer,"{""brand"": ""Dell"", ""model"": ""XPS""}",{},2,SYNTHETIC
+560,get Dell computers,READ,computer,{},"{""brand"": ""Dell""}",1,SYNTHETIC
+561,delete computer Dell XPS,DELETE,computer,{},"{""brand"": ""Dell"", ""model"": ""XPS""}",2,SYNTHETIC
+562,"update computer Dell XPS, set RAM=16GB",UPDATE,computer,"{""RAM"": ""16GB""}","{""brand"": ""Dell"", ""model"": ""XPS""}",3,SYNTHETIC
+563,"add phone with brand=Apple, model=iPhone 15",ADD,phone,"{""brand"": ""Apple"", ""model"": ""iPhone 15""}",{},2,SYNTHETIC
+564,show Apple phones,READ,phone,{},"{""brand"": ""Apple""}",1,SYNTHETIC
+565,delete phone iPhone 15,DELETE,phone,{},"{""model"": ""iPhone 15""}",1,SYNTHETIC
+566,"update phone iPhone 15, set storage=256GB",UPDATE,phone,"{""storage"": ""256GB""}","{""model"": ""iPhone 15""}",2,SYNTHETIC
+567,"add appliance with type=Refrigerator, brand=Samsung",ADD,appliance,"{""type"": ""Refrigerator"", ""brand"": ""Samsung""}",{},2,SYNTHETIC
+568,get Samsung appliances,READ,appliance,{},"{""brand"": ""Samsung""}",1,SYNTHETIC
+569,delete appliance Refrigerator,DELETE,appliance,{},"{""type"": ""Refrigerator""}",1,SYNTHETIC
+570,"update appliance Refrigerator, set color=silver",UPDATE,appliance,"{""color"": ""silver""}","{""type"": ""Refrigerator""}",2,SYNTHETIC
+571,"add clothing with item=T-shirt, size=M",ADD,clothing,"{""item"": ""T-shirt"", ""size"": ""M""}",{},2,SYNTHETIC
+572,show all size M clothing,READ,clothing,{},"{""size"": ""M""}",1,SYNTHETIC
+573,delete clothing T-shirt,DELETE,clothing,{},"{""item"": ""T-shirt""}",1,SYNTHETIC
+574,"update clothing T-shirt, set color=blue",UPDATE,clothing,"{""color"": ""blue""}","{""item"": ""T-shirt""}",2,SYNTHETIC
+575,"add footwear with type=Sneakers, brand=Nike",ADD,footwear,"{""type"": ""Sneakers"", ""brand"": ""Nike""}",{},2,SYNTHETIC
+576,get Nike footwear,READ,footwear,{},"{""brand"": ""Nike""}",1,SYNTHETIC
+577,delete footwear Sneakers,DELETE,footwear,{},"{""type"": ""Sneakers""}",1,SYNTHETIC
+578,"update footwear Sneakers, set size=9",UPDATE,footwear,"{""size"": ""9""}","{""type"": ""Sneakers""}",2,SYNTHETIC
+579,"add furniture with item=Sofa, material=leather",ADD,furniture,"{""item"": ""Sofa"", ""material"": ""leather""}",{},2,SYNTHETIC
+580,show leather furniture,READ,furniture,{},"{""material"": ""leather""}",1,SYNTHETIC
+581,delete furniture Sofa,DELETE,furniture,{},"{""item"": ""Sofa""}",1,SYNTHETIC
+582,"update furniture Sofa, set color=brown",UPDATE,furniture,"{""color"": ""brown""}","{""item"": ""Sofa""}",2,SYNTHETIC
+583,"add building with type=Office, address=456 Oak Ave",ADD,building,"{""type"": ""Office"", ""address"": ""456 Oak Ave""}",{},2,SYNTHETIC
+584,get all office buildings,READ,building,{},"{""type"": ""Office""}",1,SYNTHETIC
+585,delete building 456 Oak Ave,DELETE,building,{},"{""address"": ""456 Oak Ave""}",1,SYNTHETIC
+586,"update building 456 Oak Ave, set floors=10",UPDATE,building,"{""floors"": ""10""}","{""address"": ""456 Oak Ave""}",2,SYNTHETIC
+587,"add device with type=Smart Speaker, brand=Google",ADD,device,"{""type"": ""Smart Speaker"", ""brand"": ""Google""}",{},2,SYNTHETIC
+588,show Google devices,READ,device,{},"{""brand"": ""Google""}",1,SYNTHETIC
+589,delete device Smart Speaker,DELETE,device,{},"{""type"": ""Smart Speaker""}",1,SYNTHETIC
+590,"update device Smart Speaker, set status=offline",UPDATE,device,"{""status"": ""offline""}","{""type"": ""Smart Speaker""}",2,SYNTHETIC
+591,"add software with name=Photoshop, version=CC",ADD,software,"{""name"": ""Photoshop"", ""version"": ""CC""}",{},2,SYNTHETIC
+592,get software with version CC,READ,software,{},"{""version"": ""CC""}",1,SYNTHETIC
+593,delete software Photoshop,DELETE,software,{},"{""name"": ""Photoshop""}",1,SYNTHETIC
+594,"update software Photoshop, set license=perpetual",UPDATE,software,"{""license"": ""perpetual""}","{""name"": ""Photoshop""}",2,SYNTHETIC
+595,"add game with title=Cyberpunk 2077, genre=RPG",ADD,game,"{""title"": ""Cyberpunk 2077"", ""genre"": ""RPG""}",{},2,SYNTHETIC
+596,show RPG games,READ,game,{},"{""genre"": ""RPG""}",1,SYNTHETIC
+597,delete game Cyberpunk 2077,DELETE,game,{},"{""title"": ""Cyberpunk 2077""}",1,SYNTHETIC
+598,"update game Cyberpunk 2077, set platform=PC",UPDATE,game,"{""platform"": ""PC""}","{""title"": ""Cyberpunk 2077""}",2,SYNTHETIC
+599,"add console with brand=Sony, model=PlayStation 5",ADD,console,"{""brand"": ""Sony"", ""model"": ""PlayStation 5""}",{},2,SYNTHETIC
+600,get Sony consoles,READ,console,{},"{""brand"": ""Sony""}",1,SYNTHETIC
+601,delete console PlayStation 5,DELETE,console,{},"{""model"": ""PlayStation 5""}",1,SYNTHETIC
+602,"update console PlayStation 5, set storage=1TB",UPDATE,console,"{""storage"": ""1TB""}","{""model"": ""PlayStation 5""}",2,SYNTHETIC
+603,"add artwork with title=Starry Night, artist=Vincent van Gogh",ADD,artwork,"{""title"": ""Starry Night"", ""artist"": ""Vincent van Gogh""}",{},2,SYNTHETIC
+604,show artworks by Vincent van Gogh,READ,artwork,{},"{""artist"": ""Vincent van Gogh""}",1,SYNTHETIC
+605,delete artwork Starry Night,DELETE,artwork,{},"{""title"": ""Starry Night""}",1,SYNTHETIC
+606,"update artwork Starry Night, set year=1889",UPDATE,artwork,"{""year"": ""1889""}","{""title"": ""Starry Night""}",2,SYNTHETIC
+607,"add museum with name=The Louvre, city=Paris",ADD,museum,"{""name"": ""The Louvre"", ""city"": ""Paris""}",{},2,SYNTHETIC
+608,get museums in Paris,READ,museum,{},"{""city"": ""Paris""}",1,SYNTHETIC
+609,delete museum The Louvre,DELETE,museum,{},"{""name"": ""The Louvre""}",1,SYNTHETIC
+610,"update museum The Louvre, set exhibits=Ancient Egypt",UPDATE,museum,"{""exhibits"": ""Ancient Egypt""}","{""name"": ""The Louvre""}",2,SYNTHETIC
+611,"add monument with name=Eiffel Tower, location=Paris",ADD,monument,"{""name"": ""Eiffel Tower"", ""location"": ""Paris""}",{},2,SYNTHETIC
+612,show monuments in Paris,READ,monument,{},"{""location"": ""Paris""}",1,SYNTHETIC
+613,delete monument Eiffel Tower,DELETE,monument,{},"{""name"": ""Eiffel Tower""}",1,SYNTHETIC
+614,"update monument Eiffel Tower, set height=330m",UPDATE,monument,"{""height"": ""330m""}","{""name"": ""Eiffel Tower""}",2,SYNTHETIC
+615,"add landmark with name=Statue of Liberty, city=New York",ADD,landmark,"{""name"": ""Statue of Liberty"", ""city"": ""New York""}",{},2,SYNTHETIC
+616,get landmarks in New York,READ,landmark,{},"{""city"": ""New York""}",1,SYNTHETIC
+617,delete landmark Statue of Liberty,DELETE,landmark,{},"{""name"": ""Statue of Liberty""}",1,SYNTHETIC
+618,"update landmark Statue of Liberty, set year_built=1886",UPDATE,landmark,"{""year_built"": ""1886""}","{""name"": ""Statue of Liberty""}",2,SYNTHETIC
+619,"add country with name=Japan, capital=Tokyo",ADD,country,"{""name"": ""Japan"", ""capital"": ""Tokyo""}",{},2,SYNTHETIC
+620,show countries with capital Tokyo,READ,country,{},"{""capital"": ""Tokyo""}",1,SYNTHETIC
+621,delete country Japan,DELETE,country,{},"{""name"": ""Japan""}",1,SYNTHETIC
+622,"update country Japan, set population=125 million",UPDATE,country,"{""population"": ""125 million""}","{""name"": ""Japan""}",2,SYNTHETIC
+623,"add city with name=London, country=UK",ADD,city,"{""name"": ""London"", ""country"": ""UK""}",{},2,SYNTHETIC
+624,get cities in UK,READ,city,{},"{""country"": ""UK""}",1,SYNTHETIC
+625,delete city London,DELETE,city,{},"{""name"": ""London""}",1,SYNTHETIC
+626,"update city London, set population=9 million",UPDATE,city,"{""population"": ""9 million""}","{""name"": ""London""}",2,SYNTHETIC
+627,"add person with name=Alice, occupation=Engineer",ADD,person,"{""name"": ""Alice"", ""occupation"": ""Engineer""}",{},2,SYNTHETIC
+628,show all engineers,READ,person,{},"{""occupation"": ""Engineer""}",1,SYNTHETIC
+629,delete person Alice,DELETE,person,{},"{""name"": ""Alice""}",1,SYNTHETIC
+630,"update person Alice, set age=30",UPDATE,person,"{""age"": ""30""}","{""name"": ""Alice""}",2,SYNTHETIC
+631,"add animal with species=Lion, habitat=Savanna",ADD,animal,"{""species"": ""Lion"", ""habitat"": ""Savanna""}",{},2,SYNTHETIC
+632,get animals in Savanna,READ,animal,{},"{""habitat"": ""Savanna""}",1,SYNTHETIC
+633,delete animal Lion,DELETE,animal,{},"{""species"": ""Lion""}",1,SYNTHETIC
+634,"update animal Lion, set diet=carnivore",UPDATE,animal,"{""diet"": ""carnivore""}","{""species"": ""Lion""}",2,SYNTHETIC
+635,"add planet with name=Mars, type=terrestrial",ADD,planet,"{""name"": ""Mars"", ""type"": ""terrestrial""}",{},2,SYNTHETIC
+636,show terrestrial planets,READ,planet,{},"{""type"": ""terrestrial""}",1,SYNTHETIC
+637,delete planet Mars,DELETE,planet,{},"{""name"": ""Mars""}",1,SYNTHETIC
+638,"update planet Mars, set moons=2",UPDATE,planet,"{""moons"": ""2""}","{""name"": ""Mars""}",2,SYNTHETIC
+639,"add star with name=Sun, type=G-type",ADD,star,"{""name"": ""Sun"", ""type"": ""G-type""}",{},2,SYNTHETIC
+640,get G-type stars,READ,star,{},"{""type"": ""G-type""}",1,SYNTHETIC
+641,delete star Sun,DELETE,star,{},"{""name"": ""Sun""}",1,SYNTHETIC
+642,"update star Sun, set age=4.6 billion years",UPDATE,star,"{""age"": ""4.6 billion years""}","{""name"": ""Sun""}",2,SYNTHETIC
+643,"add galaxy with name=Milky Way, type=spiral",ADD,galaxy,"{""name"": ""Milky Way"", ""type"": ""spiral""}",{},2,SYNTHETIC
+644,show spiral galaxies,READ,galaxy,{},"{""type"": ""spiral""}",1,SYNTHETIC
+645,delete galaxy Milky Way,DELETE,galaxy,{},"{""name"": ""Milky Way""}",1,SYNTHETIC
+646,"update galaxy Milky Way, set diameter=100000 light-years",UPDATE,galaxy,"{""diameter"": ""100000 light-years""}","{""name"": ""Milky Way""}",2,SYNTHETIC
+647,add universe with theory=Big Bang,ADD,universe,"{""theory"": ""Big Bang""}",{},1,SYNTHETIC
+648,get universe with Big Bang theory,READ,universe,{},"{""theory"": ""Big Bang""}",1,SYNTHETIC
+649,delete universe with Big Bang theory,DELETE,universe,{},"{""theory"": ""Big Bang""}",1,SYNTHETIC
+650,"update universe with Big Bang theory, set age=13.8 billion years",UPDATE,universe,"{""age"": ""13.8 billion years""}","{""theory"": ""Big Bang""}",2,SYNTHETIC
+651,"add instrument with type=Guitar, brand=Fender",ADD,instrument,"{""type"": ""Guitar"", ""brand"": ""Fender""}",{},2,SYNTHETIC
+652,show Fender guitars,READ,instrument,{},"{""brand"": ""Fender""}",1,SYNTHETIC
+653,delete instrument Guitar,DELETE,instrument,{},"{""type"": ""Guitar""}",1,SYNTHETIC
+654,"update instrument Guitar, set strings=6",UPDATE,instrument,"{""strings"": ""6""}","{""type"": ""Guitar""}",2,SYNTHETIC
+655,"add painting with title=Mona Lisa, artist=Leonardo da Vinci",ADD,painting,"{""title"": ""Mona Lisa"", ""artist"": ""Leonardo da Vinci""}",{},2,SYNTHETIC
+656,get paintings by Leonardo da Vinci,READ,painting,{},"{""artist"": ""Leonardo da Vinci""}",1,SYNTHETIC
+657,delete painting Mona Lisa,DELETE,painting,{},"{""title"": ""Mona Lisa""}",1,SYNTHETIC
+658,"update painting Mona Lisa, set year=1503",UPDATE,painting,"{""year"": ""1503""}","{""title"": ""Mona Lisa""}",2,SYNTHETIC
+659,"add sculpture with name=David, artist=Michelangelo",ADD,sculpture,"{""name"": ""David"", ""artist"": ""Michelangelo""}",{},2,SYNTHETIC
+660,show sculptures by Michelangelo,READ,sculpture,{},"{""artist"": ""Michelangelo""}",1,SYNTHETIC
+661,delete sculpture David,DELETE,sculpture,{},"{""name"": ""David""}",1,SYNTHETIC
+662,"update sculpture David, set material=marble",UPDATE,sculpture,"{""material"": ""marble""}","{""name"": ""David""}",2,SYNTHETIC
+663,"add a student with name=Emily, id=S001",ADD,student,"{""name"": ""Emily"", ""id"": ""S001""}",{},2,SYNTHETIC
+664,"add subject with name=Chemistry, credits=4",ADD,subject,"{""name"": ""Chemistry"", ""credits"": ""4""}",{},2,SYNTHETIC
+665,"add teacher with name=Maria, department=Physics",ADD,teacher,"{""name"": ""Maria"", ""department"": ""Physics""}",{},2,SYNTHETIC
+666,"add outcome with category=Salary, amount=5000",ADD,outcome,"{""category"": ""Salary"", ""amount"": ""5000""}",{},2,SYNTHETIC
+667,"add invoice with id=INV005, total=250.75",ADD,invoice,"{""id"": ""INV005"", ""total"": ""250.75""}",{},2,SYNTHETIC
+668,"add test with subject=Math, grade=A",ADD,test,"{""subject"": ""Math"", ""grade"": ""A""}",{},2,SYNTHETIC
+669,delete student id=S001,DELETE,student,{},"{""id"": ""S001""}",1,SYNTHETIC
+670,"update subject Chemistry, set description='Introductory Chemistry'",UPDATE,subject,"{""description"": ""Introductory Chemistry""}","{""name"": ""Chemistry""}",2,SYNTHETIC
+671,show teachers from Physics department,READ,teacher,{},"{""department"": ""Physics""}",1,SYNTHETIC
+672,get outcomes with amount > 1000,READ,outcome,{},"{""amount"": "">1000""}",1,SYNTHETIC
+673,"update invoice INV005, set status=paid",UPDATE,invoice,"{""status"": ""paid""}","{""id"": ""INV005""}",2,SYNTHETIC
+674,"add article about AI, date=2024-01-15",ADD,article,"{""topic"": ""AI"", ""date"": ""2024-01-15""}",{},2,SYNTHETIC
+675,delete article with topic AI,DELETE,article,{},"{""topic"": ""AI""}",1,SYNTHETIC
+676,"update article with date 2024-01-15, set author=John Doe",UPDATE,article,"{""author"": ""John Doe""}","{""date"": ""2024-01-15""}",2,SYNTHETIC
+677,add a student with enrollment_date=2023-09-01,ADD,student,"{""enrollment_date"": ""2023-09-01""}",{},1,SYNTHETIC
+678,add course with instructor=Dr. Smith,ADD,course,"{""instructor"": ""Dr. Smith""}",{},1,SYNTHETIC
+679,add book with ISBN=978-0321765723,ADD,book,"{""ISBN"": ""978-0321765723""}",{},1,SYNTHETIC
+680,add employee with employee_id=EMP007,ADD,employee,"{""employee_id"": ""EMP007""}",{},1,SYNTHETIC
+681,add product with SKU=SKU001,ADD,product,"{""SKU"": ""SKU001""}",{},1,SYNTHETIC
+682,add customer with customer_id=CUST003,ADD,customer,"{""customer_id"": ""CUST003""}",{},1,SYNTHETIC
+683,add order with order_date=2025-06-10,ADD,order,"{""order_date"": ""2025-06-10""}",{},1,SYNTHETIC
+684,add project with start_date=2025-01-01,ADD,project,"{""start_date"": ""2025-01-01""}",{},1,SYNTHETIC
+685,add task with assigned_to=Alice,ADD,task,"{""assigned_to"": ""Alice""}",{},1,SYNTHETIC
+686,add event with location=Conference Room A,ADD,event,"{""location"": ""Conference Room A""}",{},1,SYNTHETIC
+687,add feedback with source=website,ADD,feedback,"{""source"": ""website""}",{},1,SYNTHETIC
+688,add user with role=admin,ADD,user,"{""role"": ""admin""}",{},1,SYNTHETIC
+689,add report with generation_date=today,ADD,report,"{""generation_date"": ""today""}",{},1,SYNTHETIC
+690,add document with creation_date=2024-05-20,ADD,document,"{""creation_date"": ""2024-05-20""}",{},1,SYNTHETIC
+691,add movie with genre=Action,ADD,movie,"{""genre"": ""Action""}",{},1,SYNTHETIC
+692,add song with duration=3:45,ADD,song,"{""duration"": ""3:45""}",{},1,SYNTHETIC
+693,add album with genre=Pop,ADD,album,"{""genre"": ""Pop""}",{},1,SYNTHETIC
+694,add playlist with number_of_songs=25,ADD,playlist,"{""number_of_songs"": ""25""}",{},1,SYNTHETIC
+695,add podcast with category=Technology,ADD,podcast,"{""category"": ""Technology""}",{},1,SYNTHETIC
+696,add recipe with difficulty=medium,ADD,recipe,"{""difficulty"": ""medium""}",{},1,SYNTHETIC
+697,add ingredient with storage_type=pantry,ADD,ingredient,"{""storage_type"": ""pantry""}",{},1,SYNTHETIC
+698,add restaurant with capacity=100,ADD,restaurant,"{""capacity"": ""100""}",{},1,SYNTHETIC
+699,add car with color=red,ADD,car,"{""color"": ""red""}",{},1,SYNTHETIC
+700,add house with area=1500 sq ft,ADD,house,"{""area"": ""1500 sq ft""}",{},1,SYNTHETIC
+701,add pet with vaccinated=true,ADD,pet,"{""vaccinated"": ""true""}",{},1,SYNTHETIC
+702,add plant with watering_frequency=weekly,ADD,plant,"{""watering_frequency"": ""weekly""}",{},1,SYNTHETIC
+703,add computer with OS=Windows,ADD,computer,"{""OS"": ""Windows""}",{},1,SYNTHETIC
+704,add phone with carrier=Verizon,ADD,phone,"{""carrier"": ""Verizon""}",{},1,SYNTHETIC
+705,add appliance with energy_rating=A++,ADD,appliance,"{""energy_rating"": ""A++""}",{},1,SYNTHETIC
+706,add clothing with brand=Levi's,ADD,clothing,"{""brand"": ""Levi\""s""}",{},1,SYNTHETIC
+707,add footwear with closure_type=laces,ADD,footwear,"{""closure_type"": ""laces""}",{},1,SYNTHETIC
+708,add furniture with assembly_required=false,ADD,furniture,"{""assembly_required"": ""false""}",{},1,SYNTHETIC
+709,add building with year_built=1990,ADD,building,"{""year_built"": ""1990""}",{},1,SYNTHETIC
+710,add device with connectivity=Wi-Fi,ADD,device,"{""connectivity"": ""Wi-Fi""}",{},1,SYNTHETIC
+711,add software with developer=Adobe,ADD,software,"{""developer"": ""Adobe""}",{},1,SYNTHETIC
+712,add game with publisher=CD Projekt Red,ADD,game,"{""publisher"": ""CD Projekt Red""}",{},1,SYNTHETIC
+713,add console with release_date=2020-11-12,ADD,console,"{""release_date"": ""2020-11-12""}",{},1,SYNTHETIC
+714,add artwork with medium=oil on canvas,ADD,artwork,"{""medium"": ""oil on canvas""}",{},1,SYNTHETIC
+715,add museum with admission_fee=20,ADD,museum,"{""admission_fee"": ""20""}",{},1,SYNTHETIC
+716,add monument with historical_significance=high,ADD,monument,"{""historical_significance"": ""high""}",{},1,SYNTHETIC
+717,add landmark with visitor_count=1000000,ADD,landmark,"{""visitor_count"": ""1000000""}",{},1,SYNTHETIC
+718,add country with currency=USD,ADD,country,"{""currency"": ""USD""}",{},1,SYNTHETIC
+719,add city with timezone=GMT-5,ADD,city,"{""timezone"": ""GMT-5""}",{},1,SYNTHETIC
+720,add person with hobby=reading,ADD,person,"{""hobby"": ""reading""}",{},1,SYNTHETIC
+721,add animal with average_lifespan=15 years,ADD,animal,"{""average_lifespan"": ""15 years""}",{},1,SYNTHETIC
+722,add planet with atmosphere=CO2 rich,ADD,planet,"{""atmosphere"": ""CO2 rich""}",{},1,SYNTHETIC
+723,add star with luminosity=high,ADD,star,"{""luminosity"": ""high""}",{},1,SYNTHETIC
+724,add galaxy with distance_from_earth=2.5 million light-years,ADD,galaxy,"{""distance_from_earth"": ""2.5 million light-years""}",{},1,SYNTHETIC
+725,add universe with dark_matter_percentage=27%,ADD,universe,"{""dark_matter_percentage"": ""27%""}",{},1,SYNTHETIC
+726,add instrument with manufacturer=Yamaha,ADD,instrument,"{""manufacturer"": ""Yamaha""}",{},1,SYNTHETIC
+727,add painting with style=Impressionism,ADD,painting,"{""style"": ""Impressionism""}",{},1,SYNTHETIC
+728,add sculpture with dimensions=2m x 1m x 1m,ADD,sculpture,"{""dimensions"": ""2m x 1m x 1m""}",{},1,SYNTHETIC
+729,show students with age > 20,READ,student,{},"{""age"": "">20""}",1,SYNTHETIC
+730,delete subjects with credits=3,DELETE,subject,{},"{""credits"": ""3""}",1,SYNTHETIC
+731,"update teachers with email domain @university.edu, set status=active",UPDATE,teacher,"{""status"": ""active""}","{""email_domain"": ""university.edu""}",2,SYNTHETIC
+732,get outcomes for current month,READ,outcome,{},"{""date"": ""current month""}",1,SYNTHETIC
+733,add invoice with due_date=2025-07-31,ADD,invoice,"{""due_date"": ""2025-07-31""}",{},1,SYNTHETIC
+734,delete tests with grade=F,DELETE,test,{},"{""grade"": ""F""}",1,SYNTHETIC
+735,"update articles with author=Jane, set status=published",UPDATE,article,"{""status"": ""published""}","{""author"": ""Jane""}",2,SYNTHETIC
+736,show courses with less than 30 students,READ,course,{},"{""number_of_students"": ""<30""}",1,SYNTHETIC
+737,delete books published before 2000,DELETE,book,{},"{""publication_year"": ""<2000""}",1,SYNTHETIC
+738,"update employees with salary < 50000, set bonus=true",UPDATE,employee,"{""bonus"": ""true""}","{""salary"": ""<50000""}",2,SYNTHETIC
+739,get products with rating 4 stars,READ,product,{},"{""rating"": ""4 stars""}",1,SYNTHETIC
+740,delete customers with no recent orders,DELETE,customer,{},"{""recent_orders"": ""none""}",1,SYNTHETIC
+741,"update orders with status pending, set fulfillment_date=tomorrow",UPDATE,order,"{""fulfillment_date"": ""tomorrow""}","{""status"": ""pending""}",2,SYNTHETIC
+742,show projects ending this quarter,READ,project,{},"{""end_date"": ""this quarter""}",1,SYNTHETIC
+743,delete tasks with priority low,DELETE,task,{},"{""priority"": ""low""}",1,SYNTHETIC
+744,"update events with date in past, set archived=true",UPDATE,event,"{""archived"": ""true""}","{""date"": ""past""}",2,SYNTHETIC
+745,get feedback with negative sentiment,READ,feedback,{},"{""sentiment"": ""negative""}",1,SYNTHETIC
+746,delete users inactive for over a year,DELETE,user,{},"{""last_login"": "">1 year ago""}",1,SYNTHETIC
+747,"update reports with type daily, set frequency=weekly",UPDATE,report,"{""frequency"": ""weekly""}","{""type"": ""daily""}",2,SYNTHETIC
+748,show documents created by John,READ,document,{},"{""created_by"": ""John""}",1,SYNTHETIC
+749,delete movies released before 2000,DELETE,movie,{},"{""release_year"": ""<2000""}",1,SYNTHETIC
+750,"update songs with genre Pop, set popularity=high",UPDATE,song,"{""popularity"": ""high""}","{""genre"": ""Pop""}",2,SYNTHETIC
+751,get albums with less than 10 tracks,READ,album,{},"{""number_of_tracks"": ""<10""}",1,SYNTHETIC
+752,delete playlists with no songs,DELETE,playlist,{},"{""number_of_songs"": ""0""}",1,SYNTHETIC
+753,"update podcasts with host Joe Rogan, set rating=5 stars",UPDATE,podcast,"{""rating"": ""5 stars""}","{""host"": ""Joe Rogan""}",2,SYNTHETIC
+754,show recipes with vegetarian diet type,READ,recipe,{},"{""diet_type"": ""vegetarian""}",1,SYNTHETIC
+755,delete ingredients not in stock,DELETE,ingredient,{},"{""in_stock"": ""false""}",1,SYNTHETIC
+756,"update restaurants with rating below 3, set status=closed",UPDATE,restaurant,"{""status"": ""closed""}","{""rating"": ""<3""}",2,SYNTHETIC
+757,get cars manufactured in Germany,READ,car,{},"{""country_of_origin"": ""Germany""}",1,SYNTHETIC
+758,delete houses with no garage,DELETE,house,{},"{""garage"": ""false""}",1,SYNTHETIC
+759,"update pets with chip id 123, set owner=Jane",UPDATE,pet,"{""owner"": ""Jane""}","{""chip_id"": ""123""}",2,SYNTHETIC
+760,show plants that need daily watering,READ,plant,{},"{""watering_frequency"": ""daily""}",1,SYNTHETIC
+761,delete computers older than 5 years,DELETE,computer,{},"{""age"": "">5 years""}",1,SYNTHETIC
+762,"update phones with low battery, set charging=true",UPDATE,phone,"{""charging"": ""true""}","{""battery_level"": ""low""}",2,SYNTHETIC
+763,get appliances with warranty still active,READ,appliance,{},"{""warranty_status"": ""active""}",1,SYNTHETIC
+764,delete clothing items with rips,DELETE,clothing,{},"{""condition"": ""ripped""}",1,SYNTHETIC
+765,"update footwear with size 8, set condition=new",UPDATE,footwear,"{""condition"": ""new""}","{""size"": ""8""}",2,SYNTHETIC
+766,show furniture requiring assembly,READ,furniture,{},"{""assembly_required"": ""true""}",1,SYNTHETIC
+767,delete buildings with less than 2 floors,DELETE,building,{},"{""floors"": ""<2""}",1,SYNTHETIC
+768,"update devices with low battery, set power_saver_mode=true",UPDATE,device,"{""power_saver_mode"": ""true""}","{""battery_status"": ""low""}",2,SYNTHETIC
+769,get software with perpetual license,READ,software,{},"{""license"": ""perpetual""}",1,SYNTHETIC
+770,delete games with low reviews,DELETE,game,{},"{""reviews"": ""low""}",1,SYNTHETIC
+771,"update consoles with serial number XYZ, set firmware_version=latest",UPDATE,console,"{""firmware_version"": ""latest""}","{""serial_number"": ""XYZ""}",2,SYNTHETIC
+772,show artworks on display,READ,artwork,{},"{""status"": ""on display""}",1,SYNTHETIC
+773,delete museums with no current exhibitions,DELETE,museum,{},"{""current_exhibitions"": ""none""}",1,SYNTHETIC
+774,"update monuments with historical protection, set renovation_needed=false",UPDATE,monument,"{""renovation_needed"": ""false""}","{""protection_status"": ""historical""}",2,SYNTHETIC
+775,get landmarks with free entry,READ,landmark,{},"{""entry_fee"": ""free""}",1,SYNTHETIC
+776,delete countries with travel warnings,DELETE,country,{},"{""travel_advisory"": ""warning""}",1,SYNTHETIC
+777,"update cities with high crime rates, set policing_level=increased",UPDATE,city,"{""policing_level"": ""increased""}","{""crime_rate"": ""high""}",2,SYNTHETIC
+778,show persons older than 60,READ,person,{},"{""age"": "">60""}",1,SYNTHETIC
+779,delete animals listed as endangered,DELETE,animal,{},"{""conservation_status"": ""endangered""}",1,SYNTHETIC
+780,"update planets with liquid water, set life_potential=high",UPDATE,planet,"{""life_potential"": ""high""}","{""water_present"": ""true""}",2,SYNTHETIC
+781,get stars nearing supernova,READ,star,{},"{""stage"": ""nearing supernova""}",1,SYNTHETIC
+782,delete galaxies experiencing a merger,DELETE,galaxy,{},"{""merger_status"": ""in progress""}",1,SYNTHETIC
+783,"update universe with expansion rate increasing, set dark_energy_research=active",UPDATE,universe,"{""dark_energy_research"": ""active""}","{""expansion_rate"": ""increasing""}",2,SYNTHETIC
+784,show instruments in mint condition,READ,instrument,{},"{""condition"": ""mint""}",1,SYNTHETIC
+785,delete paintings from 20th century,DELETE,painting,{},"{""century"": ""20th""}",1,SYNTHETIC
+786,"update sculptures made of bronze, set value=high",UPDATE,sculpture,"{""value"": ""high""}","{""material"": ""bronze""}",2,SYNTHETIC
+787,add a student with major=Computer Science,ADD,student,"{""major"": ""Computer Science""}",{},1,SYNTHETIC
+788,add subject with prerequisites='Math 101',ADD,subject,"{""prerequisites"": ""Math 101""}",{},1,SYNTHETIC
+789,add teacher with tenure=true,ADD,teacher,"{""tenure"": ""true""}",{},1,SYNTHETIC
+790,add outcome with status=pending,ADD,outcome,"{""status"": ""pending""}",{},1,SYNTHETIC
+791,add invoice with payment_method=credit card,ADD,invoice,"{""payment_method"": ""credit card""}",{},1,SYNTHETIC
+792,add test with result=pass,ADD,test,"{""result"": ""pass""}",{},1,SYNTHETIC
+793,add article with topic=Space Exploration,ADD,article,"{""topic"": ""Space Exploration""}",{},1,SYNTHETIC
+794,add course with capacity=50,ADD,course,"{""capacity"": ""50""}",{},1,SYNTHETIC
+795,add book with genre=Fantasy,ADD,book,"{""genre"": ""Fantasy""}",{},1,SYNTHETIC
+796,add employee with position=Manager,ADD,employee,"{""position"": ""Manager""}",{},1,SYNTHETIC
+797,add product with stock_quantity=100,ADD,product,"{""stock_quantity"": ""100""}",{},1,SYNTHETIC
+798,add customer with loyalty_program=true,ADD,customer,"{""loyalty_program"": ""true""}",{},1,SYNTHETIC
+799,add order with shipping_address=123 Elm St,ADD,order,"{""shipping_address"": ""123 Elm St""}",{},1,SYNTHETIC
+800,add project with budget=100000,ADD,project,"{""budget"": ""100000""}",{},1,SYNTHETIC
+801,add task with priority=high,ADD,task,"{""priority"": ""high""}",{},1,SYNTHETIC
+802,add event with attendee_count=500,ADD,event,"{""attendee_count"": ""500""}",{},1,SYNTHETIC
+803,add feedback with category=bug report,ADD,feedback,"{""category"": ""bug report""}",{},1,SYNTHETIC
+804,add user with last_login=yesterday,ADD,user,"{""last_login"": ""yesterday""}",{},1,SYNTHETIC
+805,add report with format=CSV,ADD,report,"{""format"": ""CSV""}",{},1,SYNTHETIC
+806,"add document with keywords=legal, contract",ADD,document,"{""keywords"": ""legal, contract""}",{},1,SYNTHETIC
+807,add movie with runtime=150 minutes,ADD,movie,"{""runtime"": ""150 minutes""}",{},1,SYNTHETIC
+808,add song with release_year=2020,ADD,song,"{""release_year"": ""2020""}",{},1,SYNTHETIC
+809,add album with total_tracks=12,ADD,album,"{""total_tracks"": ""12""}",{},1,SYNTHETIC
+810,add playlist with privacy_setting=public,ADD,playlist,"{""privacy_setting"": ""public""}",{},1,SYNTHETIC
+811,add podcast with average_episode_length=30 minutes,ADD,podcast,"{""average_episode_length"": ""30 minutes""}",{},1,SYNTHETIC
+812,add recipe with serving_size=4,ADD,recipe,"{""serving_size"": ""4""}",{},1,SYNTHETIC
+813,add ingredient with allergen_info=gluten-free,ADD,ingredient,"{""allergen_info"": ""gluten-free""}",{},1,SYNTHETIC
+814,add restaurant with reservation_required=true,ADD,restaurant,"{""reservation_required"": ""true""}",{},1,SYNTHETIC
+815,add car with transmission=automatic,ADD,car,"{""transmission"": ""automatic""}",{},1,SYNTHETIC
+816,add house with heating_type=gas,ADD,house,"{""heating_type"": ""gas""}",{},1,SYNTHETIC
+817,add pet with microchip_id=12345,ADD,pet,"{""microchip_id"": ""12345""}",{},1,SYNTHETIC
+818,add plant with light_requirement=full sun,ADD,plant,"{""light_requirement"": ""full sun""}",{},1,SYNTHETIC
+819,add computer with storage_type=SSD,ADD,computer,"{""storage_type"": ""SSD""}",{},1,SYNTHETIC
+820,add phone with screen_size=6.1 inches,ADD,phone,"{""screen_size"": ""6.1 inches""}",{},1,SYNTHETIC
+821,add appliance with installation_type=built-in,ADD,appliance,"{""installation_type"": ""built-in""}",{},1,SYNTHETIC
+822,add clothing with material=cotton,ADD,clothing,"{""material"": ""cotton""}",{},1,SYNTHETIC
+823,add footwear with sole_material=rubber,ADD,footwear,"{""sole_material"": ""rubber""}",{},1,SYNTHETIC
+824,add furniture with condition=new,ADD,furniture,"{""condition"": ""new""}",{},1,SYNTHETIC
+825,add building with purpose=residential,ADD,building,"{""purpose"": ""residential""}",{},1,SYNTHETIC
+826,add device with battery_life=10 hours,ADD,device,"{""battery_life"": ""10 hours""}",{},1,SYNTHETIC
+827,add software with operating_system=macOS,ADD,software,"{""operating_system"": ""macOS""}",{},1,SYNTHETIC
+828,add game with multiplayer_support=true,ADD,game,"{""multiplayer_support"": ""true""}",{},1,SYNTHETIC
+829,add console with controller_type=wireless,ADD,console,"{""controller_type"": ""wireless""}",{},1,SYNTHETIC
+830,add artwork with creation_date=1888,ADD,artwork,"{""creation_date"": ""1888""}",{},1,SYNTHETIC
+831,add museum with visitor_restrictions=none,ADD,museum,"{""visitor_restrictions"": ""none""}",{},1,SYNTHETIC
+832,add monument with maintenance_status=good,ADD,monument,"{""maintenance_status"": ""good""}",{},1,SYNTHETIC
+833,add landmark with historical_status=protected,ADD,landmark,"{""historical_status"": ""protected""}",{},1,SYNTHETIC
+834,add country with major_language=English,ADD,country,"{""major_language"": ""English""}",{},1,SYNTHETIC
+835,add city with average_temperature=25 C,ADD,city,"{""average_temperature"": ""25 C""}",{},1,SYNTHETIC
+836,add person with marital_status=single,ADD,person,"{""marital_status"": ""single""}",{},1,SYNTHETIC
+837,add animal with lifespan_in_captivity=20 years,ADD,animal,"{""lifespan_in_captivity"": ""20 years""}",{},1,SYNTHETIC
+838,add planet with rings=true,ADD,planet,"{""rings"": ""true""}",{},1,SYNTHETIC
+839,add star with distance_from_earth=4.2 light-years,ADD,star,"{""distance_from_earth"": ""4.2 light-years""}",{},1,SYNTHETIC
+840,add galaxy with number_of_stars=200 billion,ADD,galaxy,"{""number_of_stars"": ""200 billion""}",{},1,SYNTHETIC
+841,add universe with estimated_future=heat death,ADD,universe,"{""estimated_future"": ""heat death""}",{},1,SYNTHETIC
+842,add instrument with year_manufactured=2010,ADD,instrument,"{""year_manufactured"": ""2010""}",{},1,SYNTHETIC
+843,add painting with dimensions=77 cm x 53 cm,ADD,painting,"{""dimensions"": ""77 cm x 53 cm""}",{},1,SYNTHETIC
+844,add sculpture with weight=500 kg,ADD,sculpture,"{""weight"": ""500 kg""}",{},1,SYNTHETIC
+845,show students majoring in Biology,READ,student,{},"{""major"": ""Biology""}",1,SYNTHETIC
+846,delete subjects without any prerequisites,DELETE,subject,{},"{""prerequisites"": ""none""}",1,SYNTHETIC
+847,"update teachers who are part-time, set full_time=false",UPDATE,teacher,"{""full_time"": ""false""}","{""employment_type"": ""part-time""}",2,SYNTHETIC
+848,get outcomes with category 'Rent',READ,outcome,{},"{""category"": ""Rent""}",1,SYNTHETIC
+849,add invoice with currency=EUR,ADD,invoice,"{""currency"": ""EUR""}",{},1,SYNTHETIC
+850,delete tests taken after 2024,DELETE,test,{},"{""date_taken"": "">2024""}",1,SYNTHETIC
+851,"update articles with status 'draft', set published_date=today",UPDATE,article,"{""published_date"": ""today""}","{""status"": ""draft""}",2,SYNTHETIC
+852,show courses that are online,READ,course,{},"{""delivery_method"": ""online""}",1,SYNTHETIC
+853,delete books with more than 500 pages,DELETE,book,{},"{""pages"": "">500""}",1,SYNTHETIC
+854,"update employees in Marketing, set experience_level=senior",UPDATE,employee,"{""experience_level"": ""senior""}","{""department"": ""Marketing""}",2,SYNTHETIC
+855,get products from brand 'Sony',READ,product,{},"{""brand"": ""Sony""}",1,SYNTHETIC
+856,delete customers with last_activity over 6 months ago,DELETE,customer,{},"{""last_activity"": "">6 months ago""}",1,SYNTHETIC
+857,"update orders placed on a weekend, set discount=10%",UPDATE,order,"{""discount"": ""10%""}","{""day_of_week"": ""weekend""}",2,SYNTHETIC
+858,show projects currently active,READ,project,{},"{""status"": ""active""}",1,SYNTHETIC
+859,delete tasks completed before deadline,DELETE,task,{},"{""completion_status"": ""early""}",1,SYNTHETIC
+860,"update events with participant count less than 10, set cancelled=true",UPDATE,event,"{""cancelled"": ""true""}","{""participant_count"": ""<10""}",2,SYNTHETIC
+861,get feedback received today,READ,feedback,{},"{""date_received"": ""today""}",1,SYNTHETIC
+862,delete users with no assigned roles,DELETE,user,{},"{""roles"": ""none""}",1,SYNTHETIC
+863,"update reports with data source 'external', set data_quality=high",UPDATE,report,"{""data_quality"": ""high""}","{""data_source"": ""external""}",2,SYNTHETIC
+864,show documents last modified last week,READ,document,{},"{""last_modified"": ""last week""}",1,SYNTHETIC
+865,delete movies with budget under 1 million,DELETE,movie,{},"{""budget"": ""<1 million""}",1,SYNTHETIC
+866,"update songs with explicit lyrics, set content_warning=true",UPDATE,song,"{""content_warning"": ""true""}","{""explicit_lyrics"": ""true""}",2,SYNTHETIC
+867,get albums released this year,READ,album,{},"{""release_year"": ""this year""}",1,SYNTHETIC
+868,delete playlists that are private,DELETE,playlist,{},"{""privacy_setting"": ""private""}",1,SYNTHETIC
+869,"update podcasts with less than 100 episodes, set featured=true",UPDATE,podcast,"{""featured"": ""true""}","{""total_episodes"": ""<100""}",2,SYNTHETIC
+870,show recipes with cook time less than 30 minutes,READ,recipe,{},"{""cook_time"": ""<30 minutes""}",1,SYNTHETIC
+871,delete ingredients that are perishable,DELETE,ingredient,{},"{""perishable"": ""true""}",1,SYNTHETIC
+872,"update restaurants with outdoor seating, set outdoor_dining_available=true",UPDATE,restaurant,"{""outdoor_dining_available"": ""true""}","{""has_outdoor_seating"": ""true""}",2,SYNTHETIC
+873,get cars with low mileage,READ,car,{},"{""mileage"": ""low""}",1,SYNTHETIC
+874,delete houses with property taxes over $5000,DELETE,house,{},"{""property_taxes"": "">$5000""}",1,SYNTHETIC
+875,"update pets with medical condition, set vet_checkup_required=true",UPDATE,pet,"{""vet_checkup_required"": ""true""}","{""medical_condition"": ""true""}",2,SYNTHETIC
+876,show plants that are drought-tolerant,READ,plant,{},"{""water_tolerance"": ""drought""}",1,SYNTHETIC
+877,delete computers with outdated graphics cards,DELETE,computer,{},"{""graphics_card_status"": ""outdated""}",1,SYNTHETIC
+878,"update phones with broken screens, set repair_status=in progress",UPDATE,phone,"{""repair_status"": ""in progress""}","{""screen_condition"": ""broken""}",2,SYNTHETIC
+879,get appliances still under warranty,READ,appliance,{},"{""warranty_remaining"": "">0""}",1,SYNTHETIC
+880,delete clothing items that are stained,DELETE,clothing,{},"{""condition"": ""stained""}",1,SYNTHETIC
+881,"update footwear that is waterproof, set suitable_for_rain=true",UPDATE,footwear,"{""suitable_for_rain"": ""true""}","{""waterproof"": ""true""}",2,SYNTHETIC
+882,show furniture that is vintage,READ,furniture,{},"{""style"": ""vintage""}",1,SYNTHETIC
+883,delete buildings that are vacant,DELETE,building,{},"{""occupancy_status"": ""vacant""}",1,SYNTHETIC
+884,"update devices with low storage, set cloud_backup_enabled=true",UPDATE,device,"{""cloud_backup_enabled"": ""true""}","{""storage_status"": ""low""}",2,SYNTHETIC
+885,get software with open-source license,READ,software,{},"{""license_type"": ""open-source""}",1,SYNTHETIC
+886,delete games with file size over 100GB,DELETE,game,{},"{""file_size"": "">100GB""}",1,SYNTHETIC
+887,"update consoles that are customized, set warranty_void=true",UPDATE,console,"{""warranty_void"": ""true""}","{""customized"": ""true""}",2,SYNTHETIC
+888,show artworks in private collections,READ,artwork,{},"{""collection_type"": ""private""}",1,SYNTHETIC
+889,delete museums undergoing renovation,DELETE,museum,{},"{""renovation_status"": ""in progress""}",1,SYNTHETIC
+890,"update monuments that are UNESCO sites, set preservation_priority=high",UPDATE,monument,"{""preservation_priority"": ""high""}","{""UNESCO_status"": ""true""}",2,SYNTHETIC
+891,get landmarks with historical significance 'very high',READ,landmark,{},"{""historical_significance"": ""very high""}",1,SYNTHETIC
+892,delete countries with unstable political climate,DELETE,country,{},"{""political_stability"": ""unstable""}",1,SYNTHETIC
+893,"update cities with high tourist volume, set tourism_marketing_budget=increased",UPDATE,city,"{""tourism_marketing_budget"": ""increased""}","{""tourist_volume"": ""high""}",2,SYNTHETIC
+894,show persons living in New York,READ,person,{},"{""city_of_residence"": ""New York""}",1,SYNTHETIC
+895,delete animals in zoos,DELETE,animal,{},"{""location_type"": ""zoo""}",1,SYNTHETIC
+896,"update planets with active volcanoes, set geological_activity=high",UPDATE,planet,"{""geological_activity"": ""high""}","{""volcanoes_present"": ""true""}",2,SYNTHETIC
+897,get stars with a habitable zone,READ,star,{},"{""habitable_zone"": ""true""}",1,SYNTHETIC
+898,delete galaxies with a black hole at their center,DELETE,galaxy,{},"{""central_black_hole"": ""true""}",1,SYNTHETIC
+899,"update universe with accelerating expansion, set dark_energy_dominant=true",UPDATE,universe,"{""dark_energy_dominant"": ""true""}","{""expansion_state"": ""accelerating""}",2,SYNTHETIC
+900,show instruments that are digital,READ,instrument,{},"{""type"": ""digital""}",1,SYNTHETIC
+901,delete paintings that are forged,DELETE,painting,{},"{""authenticity"": ""forged""}",1,SYNTHETIC
+902,"update sculptures in poor condition, set restoration_needed=true",UPDATE,sculpture,"{""restoration_needed"": ""true""}","{""condition"": ""poor""}",2,SYNTHETIC
+903,add a student with gpa=3.8,ADD,student,"{""gpa"": ""3.8""}",{},1,SYNTHETIC
+904,add subject with topic=Artificial Intelligence,ADD,subject,"{""topic"": ""Artificial Intelligence""}",{},1,SYNTHETIC
+905,add teacher with research_area=Machine Learning,ADD,teacher,"{""research_area"": ""Machine Learning""}",{},1,SYNTHETIC
+906,add outcome with recurrence=monthly,ADD,outcome,"{""recurrence"": ""monthly""}",{},1,SYNTHETIC
+907,add invoice with item_count=5,ADD,invoice,"{""item_count"": ""5""}",{},1,SYNTHETIC
+908,add test with max_score=100,ADD,test,"{""max_score"": ""100""}",{},1,SYNTHETIC
+909,add article with publication_venue=Journal of Science,ADD,article,"{""publication_venue"": ""Journal of Science""}",{},1,SYNTHETIC
+910,add course with start_time=9:00 AM,ADD,course,"{""start_time"": ""9:00 AM""}",{},1,SYNTHETIC
+911,add book with publisher=Penguin Random House,ADD,book,"{""publisher"": ""Penguin Random House""}",{},1,SYNTHETIC
+912,add employee with employment_type=full-time,ADD,employee,"{""employment_type"": ""full-time""}",{},1,SYNTHETIC
+913,add product with category=Electronics,ADD,product,"{""category"": ""Electronics""}",{},1,SYNTHETIC
+914,add customer with preferred_contact=email,ADD,customer,"{""preferred_contact"": ""email""}",{},1,SYNTHETIC
+915,add order with payment_status=pending,ADD,order,"{""payment_status"": ""pending""}",{},1,SYNTHETIC
+916,add project with team_size=10,ADD,project,"{""team_size"": ""10""}",{},1,SYNTHETIC
+917,add task with completion_percentage=50,ADD,task,"{""completion_percentage"": ""50""}",{},1,SYNTHETIC
+918,add event with registration_required=true,ADD,event,"{""registration_required"": ""true""}",{},1,SYNTHETIC
+919,add feedback with submission_date=2025-06-15,ADD,feedback,"{""submission_date"": ""2025-06-15""}",{},1,SYNTHETIC
+920,add user with last_password_change=3 months ago,ADD,user,"{""last_password_change"": ""3 months ago""}",{},1,SYNTHETIC
+921,add report with audience=internal,ADD,report,"{""audience"": ""internal""}",{},1,SYNTHETIC
+922,add document with security_level=confidential,ADD,document,"{""security_level"": ""confidential""}",{},1,SYNTHETIC
+923,add movie with box_office_revenue=1 billion,ADD,movie,"{""box_office_revenue"": ""1 billion""}",{},1,SYNTHETIC
+924,add song with album_name=Greatest Hits,ADD,song,"{""album_name"": ""Greatest Hits""}",{},1,SYNTHETIC
+925,add album with record_label=Universal Music,ADD,album,"{""record_label"": ""Universal Music""}",{},1,SYNTHETIC
+926,add playlist with genre_mix=Pop/Rock,ADD,playlist,"{""genre_mix"": ""Pop/Rock""}",{},1,SYNTHETIC
+927,add podcast with listener_count=50000,ADD,podcast,"{""listener_count"": ""50000""}",{},1,SYNTHETIC
+928,add recipe with image_url=example.com/recipe.jpg,ADD,recipe,"{""image_url"": ""example.com/recipe.jpg""}",{},1,SYNTHETIC
+929,add ingredient with supplier=Local Farm,ADD,ingredient,"{""supplier"": ""Local Farm""}",{},1,SYNTHETIC
+930,add restaurant with website=therestaurant.com,ADD,restaurant,"{""website"": ""therestaurant.com""}",{},1,SYNTHETIC
+931,add car with VIN=ABC123XYZ,ADD,car,"{""VIN"": ""ABC123XYZ""}",{},1,SYNTHETIC
+932,add house with builder=Green Homes,ADD,house,"{""builder"": ""Green Homes""}",{},1,SYNTHETIC
+933,add pet with vet_name=Dr. Animal,ADD,pet,"{""vet_name"": ""Dr. Animal""}",{},1,SYNTHETIC
+934,add plant with scientific_name=Rosa gallica,ADD,plant,"{""scientific_name"": ""Rosa gallica""}",{},1,SYNTHETIC
+935,add computer with graphics_card=Nvidia RTX 4090,ADD,computer,"{""graphics_card"": ""Nvidia RTX 4090""}",{},1,SYNTHETIC
+936,add phone with camera_megapixels=48MP,ADD,phone,"{""camera_megapixels"": ""48MP""}",{},1,SYNTHETIC
+937,add appliance with power_consumption=500W,ADD,appliance,"{""power_consumption"": ""500W""}",{},1,SYNTHETIC
+938,add clothing with season=summer,ADD,clothing,"{""season"": ""summer""}",{},1,SYNTHETIC
+939,add footwear with occasion=casual,ADD,footwear,"{""occasion"": ""casual""}",{},1,SYNTHETIC
+940,add furniture with design_style=modern,ADD,furniture,"{""design_style"": ""modern""}",{},1,SYNTHETIC
+941,add building with architect=Frank Gehry,ADD,building,"{""architect"": ""Frank Gehry""}",{},1,SYNTHETIC
+942,add device with voice_assistant=Alexa,ADD,device,"{""voice_assistant"": ""Alexa""}",{},1,SYNTHETIC
+943,add software with license_key=XYZ789,ADD,software,"{""license_key"": ""XYZ789""}",{},1,SYNTHETIC
+944,"add game with minimum_requirements='8GB RAM, GTX 1060'",ADD,game,"{""minimum_requirements"": ""8GB RAM, GTX 1060""}",{},1,SYNTHETIC
+945,"add console with connectivity_ports='HDMI, USB-C'",ADD,console,"{""connectivity_ports"": ""HDMI, USB-C""}",{},1,SYNTHETIC
+946,add artwork with acquisition_date=2022-10-01,ADD,artwork,"{""acquisition_date"": ""2022-10-01""}",{},1,SYNTHETIC
+947,add museum with permanent_collection_size=10000,ADD,museum,"{""permanent_collection_size"": ""10000""}",{},1,SYNTHETIC
+948,add monument with last_restoration_year=2015,ADD,monument,"{""last_restoration_year"": ""2015""}",{},1,SYNTHETIC
+949,add landmark with historical_period=Ancient Rome,ADD,landmark,"{""historical_period"": ""Ancient Rome""}",{},1,SYNTHETIC
+950,add country with national_anthem=The Star-Spangled Banner,ADD,country,"{""national_anthem"": ""The Star-Spangled Banner""}",{},1,SYNTHETIC
+951,add city with major_airport=LAX,ADD,city,"{""major_airport"": ""LAX""}",{},1,SYNTHETIC
+952,add person with education_level=PhD,ADD,person,"{""education_level"": ""PhD""}",{},1,SYNTHETIC
+953,add animal with average_weight=500 kg,ADD,animal,"{""average_weight"": ""500 kg""}",{},1,SYNTHETIC
+954,add planet with surface_temperature= -63 C,ADD,planet,"{""surface_temperature"": ""-63 C""}",{},1,SYNTHETIC
+955,add star with spectral_type=M-type,ADD,star,"{""spectral_type"": ""M-type""}",{},1,SYNTHETIC
+956,add galaxy with central_supermassive_black_hole=true,ADD,galaxy,"{""central_supermassive_black_hole"": ""true""}",{},1,SYNTHETIC
+957,add universe with dark_energy_density=constant,ADD,universe,"{""dark_energy_density"": ""constant""}",{},1,SYNTHETIC
+958,add instrument with condition=used,ADD,instrument,"{""condition"": ""used""}",{},1,SYNTHETIC
+959,add painting with frame_type=ornate,ADD,painting,"{""frame_type"": ""ornate""}",{},1,SYNTHETIC
+960,add sculpture with acquisition_method=donation,ADD,sculpture,"{""acquisition_method"": ""donation""}",{},1,SYNTHETIC
+961,show students with last name Smith,READ,student,{},"{""last_name"": ""Smith""}",1,SYNTHETIC
+962,delete subjects with no assigned teacher,DELETE,subject,{},"{""assigned_teacher"": ""none""}",1,SYNTHETIC
+963,"update teachers with office number 101, set availability=Mon-Fri",UPDATE,teacher,"{""availability"": ""Mon-Fri""}","{""office_number"": ""101""}",2,SYNTHETIC
+964,get outcomes with description containing 'travel',READ,outcome,{},"{""description_contains"": ""travel""}",1,SYNTHETIC
+965,add invoice with recipient=ABC Corp,ADD,invoice,"{""recipient"": ""ABC Corp""}",{},1,SYNTHETIC
+966,delete tests from last semester,DELETE,test,{},"{""semester"": ""last""}",1,SYNTHETIC
+967,"update articles with category 'Technology', set review_status=completed",UPDATE,article,"{""review_status"": ""completed""}","{""category"": ""Technology""}",2,SYNTHETIC
+968,show courses for freshmen,READ,course,{},"{""target_audience"": ""freshmen""}",1,SYNTHETIC
+969,delete books with missing pages,DELETE,book,{},"{""condition"": ""missing pages""}",1,SYNTHETIC
+970,"update employees on leave, set leave_end_date=2025-07-01",UPDATE,employee,"{""leave_end_date"": ""2025-07-01""}","{""status"": ""on leave""}",2,SYNTHETIC
+971,get products on sale,READ,product,{},"{""on_sale"": ""true""}",1,SYNTHETIC
+972,delete customers with invalid email addresses,DELETE,customer,{},"{""email_valid"": ""false""}",1,SYNTHETIC
+973,"update orders with high value, set expedited_shipping=true",UPDATE,order,"{""expedited_shipping"": ""true""}","{""value"": ""high""}",2,SYNTHETIC
+974,show projects with a critical path identified,READ,project,{},"{""critical_path_identified"": ""true""}",1,SYNTHETIC
+975,delete tasks assigned to Bob,DELETE,task,{},"{""assigned_to"": ""Bob""}",1,SYNTHETIC
+976,"update events marked as draft, set published=true",UPDATE,event,"{""published"": ""true""}","{""status"": ""draft""}",2,SYNTHETIC
+977,get feedback awaiting response,READ,feedback,{},"{""response_status"": ""awaiting""}",1,SYNTHETIC
+978,delete users with expired accounts,DELETE,user,{},"{""account_status"": ""expired""}",1,SYNTHETIC
+979,"update reports with distribution list, set automated_delivery=true",UPDATE,report,"{""automated_delivery"": ""true""}","{""has_distribution_list"": ""true""}",2,SYNTHETIC
+980,show documents with pending approval,READ,document,{},"{""approval_status"": ""pending""}",1,SYNTHETIC
+981,delete movies without a rating,DELETE,movie,{},"{""rating"": ""none""}",1,SYNTHETIC
+982,"update songs marked as favorites, set visible_to_public=true",UPDATE,song,"{""visible_to_public"": ""true""}","{""favorite"": ""true""}",2,SYNTHETIC
+983,get albums with explicit content,READ,album,{},"{""explicit_content"": ""true""}",1,SYNTHETIC
+984,delete playlists that are collaborative,DELETE,playlist,{},"{""collaborative"": ""true""}",1,SYNTHETIC
+985,"update podcasts with new episodes, set notification_sent=true",UPDATE,podcast,"{""notification_sent"": ""true""}","{""new_episodes"": ""true""}",2,SYNTHETIC
+986,"show recipes with a specific dietary restriction, e.g., vegan",READ,recipe,{},"{""dietary_restriction"": ""vegan""}",1,SYNTHETIC
+987,delete ingredients with expired date,DELETE,ingredient,{},"{""expiration_date"": ""expired""}",1,SYNTHETIC
+988,"update restaurants with outdoor seating, set outdoor_seating_available=true",UPDATE,restaurant,"{""outdoor_seating_available"": ""true""}","{""has_outdoor_seating"": ""true""}",2,SYNTHETIC
+989,get cars with a clean title,READ,car,{},"{""title_status"": ""clean""}",1,SYNTHETIC
+990,delete houses with a pending sale,DELETE,house,{},"{""sale_status"": ""pending""}",1,SYNTHETIC
+991,"update pets with special needs, set medical_alert_required=true",UPDATE,pet,"{""medical_alert_required"": ""true""}","{""special_needs"": ""true""}",2,SYNTHETIC
+992,show plants that are toxic to pets,READ,plant,{},"{""toxic_to_pets"": ""true""}",1,SYNTHETIC
+993,delete computers with persistent errors,DELETE,computer,{},"{""error_status"": ""persistent""}",1,SYNTHETIC
+994,"update phones with low signal, set network_booster_needed=true",UPDATE,phone,"{""network_booster_needed"": ""true""}","{""signal_strength"": ""low""}",2,SYNTHETIC
+995,get appliances with smart features,READ,appliance,{},"{""smart_features"": ""true""}",1,SYNTHETIC
+996,delete clothing items that are out of season,DELETE,clothing,{},"{""seasonal_status"": ""out of season""}",1,SYNTHETIC
+997,"update footwear that is limited edition, set collector_value=high",UPDATE,footwear,"{""collector_value"": ""high""}","{""edition_type"": ""limited""}",2,SYNTHETIC
+998,show furniture that is handcrafted,READ,furniture,{},"{""manufacturing_method"": ""handcrafted""}",1,SYNTHETIC
+999,delete buildings that are historical landmarks,DELETE,building,{},"{""landmark_status"": ""historical""}",1,SYNTHETIC
+1000,"update devices with low performance, set troubleshoot_required=true",UPDATE,device,"{""troubleshoot_required"": ""true""}","{""performance_status"": ""low""}",2,SYNTHETIC
+1001,get software with regular updates,READ,software,{},"{""update_frequency"": ""regular""}",1,SYNTHETIC
+1002,delete games with high system requirements,DELETE,game,{},"{""system_requirements"": ""high""}",1,SYNTHETIC
+1003,"update consoles with network issues, set internet_connection_status=unstable",UPDATE,console,"{""internet_connection_status"": ""unstable""}","{""network_issues"": ""true""}",2,SYNTHETIC
+1004,show artworks with a high market value,READ,artwork,{},"{""market_value"": ""high""}",1,SYNTHETIC
+1005,delete museums with limited accessibility,DELETE,museum,{},"{""accessibility"": ""limited""}",1,SYNTHETIC
+1006,"update monuments with significant damage, set repair_status=scheduled",UPDATE,monument,"{""repair_status"": ""scheduled""}","{""damage_level"": ""significant""}",2,SYNTHETIC
+1007,get landmarks open to the public,READ,landmark,{},"{""public_access"": ""true""}",1,SYNTHETIC
+1008,delete countries with ongoing conflicts,DELETE,country,{},"{""conflict_status"": ""ongoing""}",1,SYNTHETIC
+1009,"update cities with increasing pollution, set environmental_initiatives=active",UPDATE,city,"{""environmental_initiatives"": ""active""}","{""pollution_level"": ""increasing""}",2,SYNTHETIC
+1010,show persons with specific medical conditions,READ,person,{},"{""medical_condition"": ""true""}",1,SYNTHETIC
+1011,delete animals that are invasive species,DELETE,animal,{},"{""species_type"": ""invasive""}",1,SYNTHETIC
+1012,"update planets with potential for colonization, set colonization_priority=high",UPDATE,planet,"{""colonization_priority"": ""high""}","{""colonization_potential"": ""true""}",2,SYNTHETIC
+1013,get stars in binary systems,READ,star,{},"{""system_type"": ""binary""}",1,SYNTHETIC
+1014,delete galaxies with irregular shapes,DELETE,galaxy,{},"{""shape"": ""irregular""}",1,SYNTHETIC
+1015,"update universe with unknown properties, set research_focus=intensive",UPDATE,universe,"{""research_focus"": ""intensive""}","{""properties_status"": ""unknown""}",2,SYNTHETIC
+1016,show instruments that are vintage,READ,instrument,{},"{""age_category"": ""vintage""}",1,SYNTHETIC
+1017,delete paintings that are damaged,DELETE,painting,{},"{""condition"": ""damaged""}",1,SYNTHETIC
+1018,"update sculptures stored in vaults, set security_level=high",UPDATE,sculpture,"{""security_level"": ""high""}","{""storage_location"": ""vault""}",2,SYNTHETIC
+1019,add a student with enrollment_status=active,ADD,student,"{""enrollment_status"": ""active""}",{},1,SYNTHETIC
+1020,add subject with department=Mathematics,ADD,subject,"{""department"": ""Mathematics""}",{},1,SYNTHETIC
+1021,add teacher with highest_degree=PhD,ADD,teacher,"{""highest_degree"": ""PhD""}",{},1,SYNTHETIC
+1022,add outcome with source_fund=Grant A,ADD,outcome,"{""source_fund"": ""Grant A""}",{},1,SYNTHETIC
+1023,add invoice with status=overdue,ADD,invoice,"{""status"": ""overdue""}",{},1,SYNTHETIC
+1024,add test with format=multiple choice,ADD,test,"{""format"": ""multiple choice""}",{},1,SYNTHETIC
+1025,add article with peer_reviewed=true,ADD,article,"{""peer_reviewed"": ""true""}",{},1,SYNTHETIC
+1026,add course with level=beginner,ADD,course,"{""level"": ""beginner""}",{},1,SYNTHETIC
+1027,add book with availability=in stock,ADD,book,"{""availability"": ""in stock""}",{},1,SYNTHETIC
+1028,add employee with performance_rating=excellent,ADD,employee,"{""performance_rating"": ""excellent""}",{},1,SYNTHETIC
+1029,add product with warranty_period=1 year,ADD,product,"{""warranty_period"": ""1 year""}",{},1,SYNTHETIC
+1030,add customer with last_order_date=2025-05-01,ADD,customer,"{""last_order_date"": ""2025-05-01""}",{},1,SYNTHETIC
+1031,add order with delivery_status=shipped,ADD,order,"{""delivery_status"": ""shipped""}",{},1,SYNTHETIC
+1032,add project with dependencies=none,ADD,project,"{""dependencies"": ""none""}",{},1,SYNTHETIC
+1033,add task with creation_date=2025-06-01,ADD,task,"{""creation_date"": ""2025-06-01""}",{},1,SYNTHETIC
+1034,add event with budget=5000,ADD,event,"{""budget"": ""5000""}",{},1,SYNTHETIC
+1035,add feedback with resolution_status=resolved,ADD,feedback,"{""resolution_status"": ""resolved""}",{},1,SYNTHETIC
+1036,add user with last_activity=today,ADD,user,"{""last_activity"": ""today""}",{},1,SYNTHETIC
+1037,add report with delivery_frequency=weekly,ADD,report,"{""delivery_frequency"": ""weekly""}",{},1,SYNTHETIC
+1038,add document with access_level=public,ADD,document,"{""access_level"": ""public""}",{},1,SYNTHETIC
+1039,add movie with awards_won=Oscar,ADD,movie,"{""awards_won"": ""Oscar""}",{},1,SYNTHETIC
+1040,add song with stream_count=1000000,ADD,song,"{""stream_count"": ""1000000""}",{},1,SYNTHETIC
+1041,add album with review_score=9.5,ADD,album,"{""review_score"": ""9.5""}",{},1,SYNTHETIC
+1042,add playlist with total_playtime=2 hours,ADD,playlist,"{""total_playtime"": ""2 hours""}",{},1,SYNTHETIC
+1043,add podcast with sponsorship=true,ADD,podcast,"{""sponsorship"": ""true""}",{},1,SYNTHETIC
+1044,add recipe with origin_country=Mexico,ADD,recipe,"{""origin_country"": ""Mexico""}",{},1,SYNTHETIC
+1045,add ingredient with organic=true,ADD,ingredient,"{""organic"": ""true""}",{},1,SYNTHETIC
+1046,add restaurant with parking_available=true,ADD,restaurant,"{""parking_available"": ""true""}",{},1,SYNTHETIC
+1047,add car with fuel_type=electric,ADD,car,"{""fuel_type"": ""electric""}",{},1,SYNTHETIC
+1048,add house with heating_system=central,ADD,house,"{""heating_system"": ""central""}",{},1,SYNTHETIC
+1049,add pet with adoption_date=2023-03-01,ADD,pet,"{""adoption_date"": ""2023-03-01""}",{},1,SYNTHETIC
+1050,add plant with pot_size=10 inch,ADD,plant,"{""pot_size"": ""10 inch""}",{},1,SYNTHETIC
+1051,add computer with processor=Intel i9,ADD,computer,"{""processor"": ""Intel i9""}",{},1,SYNTHETIC
+1052,add phone with battery_capacity=4000 mAh,ADD,phone,"{""battery_capacity"": ""4000 mAh""}",{},1,SYNTHETIC
+1053,add appliance with installation_cost=150,ADD,appliance,"{""installation_cost"": ""150""}",{},1,SYNTHETIC
+1054,add clothing with price_range=$20-$50,ADD,clothing,"{""price_range"": ""$20-$50""}",{},1,SYNTHETIC
+1055,add footwear with waterproofing=true,ADD,footwear,"{""waterproofing"": ""true""}",{},1,SYNTHETIC
+1056,add furniture with assembly_time=2 hours,ADD,furniture,"{""assembly_time"": ""2 hours""}",{},1,SYNTHETIC
+1057,add building with renovation_status=complete,ADD,building,"{""renovation_status"": ""complete""}",{},1,SYNTHETIC
+1058,add device with warranty_status=active,ADD,device,"{""warranty_status"": ""active""}",{},1,SYNTHETIC
+1059,add software with cloud_integration=true,ADD,software,"{""cloud_integration"": ""true""}",{},1,SYNTHETIC
+1060,add game with metacritic_score=90,ADD,game,"{""metacritic_score"": ""90""}",{},1,SYNTHETIC
+1061,add console with display_output=4K,ADD,console,"{""display_output"": ""4K""}",{},1,SYNTHETIC
+1062,add artwork with authenticity_status=verified,ADD,artwork,"{""authenticity_status"": ""verified""}",{},1,SYNTHETIC
+1063,add museum with visitor_demographics=mixed,ADD,museum,"{""visitor_demographics"": ""mixed""}",{},1,SYNTHETIC
+1064,add monument with accessibility_features=ramp,ADD,monument,"{""accessibility_features"": ""ramp""}",{},1,SYNTHETIC
+1065,add landmark with architectural_style=Gothic,ADD,landmark,"{""architectural_style"": ""Gothic""}",{},1,SYNTHETIC
+1066,add country with national_animal=Eagle,ADD,country,"{""national_animal"": ""Eagle""}",{},1,SYNTHETIC
+1067,add city with public_transport_options=extensive,ADD,city,"{""public_transport_options"": ""extensive""}",{},1,SYNTHETIC
+1068,add person with employment_status=employed,ADD,person,"{""employment_status"": ""employed""}",{},1,SYNTHETIC
+1069,add animal with conservation_status=least concern,ADD,animal,"{""conservation_status"": ""least concern""}",{},1,SYNTHETIC
+1070,add planet with magnetic_field=strong,ADD,planet,"{""magnetic_field"": ""strong""}",{},1,SYNTHETIC
+1071,add star with habitable_zone_distance=1 AU,ADD,star,"{""habitable_zone_distance"": ""1 AU""}",{},1,SYNTHETIC
+1072,add galaxy with star_formation_rate=high,ADD,galaxy,"{""star_formation_rate"": ""high""}",{},1,SYNTHETIC
+1073,add universe with dark_matter_detection_experiments=active,ADD,universe,"{""dark_matter_detection_experiments"": ""active""}",{},1,SYNTHETIC
+1074,add instrument with sound_type=acoustic,ADD,instrument,"{""sound_type"": ""acoustic""}",{},1,SYNTHETIC
+1075,add painting with exhibition_status=on loan,ADD,painting,"{""exhibition_status"": ""on loan""}",{},1,SYNTHETIC
+1076,add sculpture with cultural_significance=high,ADD,sculpture,"{""cultural_significance"": ""high""}",{},1,SYNTHETIC
+1077,get students with gpa below 2.5,READ,student,{},"{""gpa"": ""<2.5""}",1,SYNTHETIC
+1078,delete subjects outside of STEM fields,DELETE,subject,{},"{""field"": ""non-STEM""}",1,SYNTHETIC
+1079,"update teachers with a recent publication, set promotion_eligible=true",UPDATE,teacher,"{""promotion_eligible"": ""true""}","{""recent_publication"": ""true""}",2,SYNTHETIC
+1080,show outcomes with status 'paid',READ,outcome,{},"{""status"": ""paid""}",1,SYNTHETIC
+1081,delete invoices paid by bank transfer,DELETE,invoice,{},"{""payment_method"": ""bank transfer""}",1,SYNTHETIC
+1082,"update tests with score below 60, set retest_required=true",UPDATE,test,"{""retest_required"": ""true""}","{""score"": ""<60""}",2,SYNTHETIC
+1083,get articles published in 2023,READ,article,{},"{""publication_year"": ""2023""}",1,SYNTHETIC
+1084,delete courses with low enrollment,DELETE,course,{},"{""enrollment_count"": ""low""}",1,SYNTHETIC
+1085,"update books with a new edition, set edition_number=2nd",UPDATE,book,"{""edition_number"": ""2nd""}","{""new_edition"": ""true""}",2,SYNTHETIC
+1086,show employees with high attendance,READ,employee,{},"{""attendance_rate"": ""high""}",1,SYNTHETIC
+1087,delete products with negative reviews,DELETE,product,{},"{""review_sentiment"": ""negative""}",1,SYNTHETIC
+1088,"update customers with unverified accounts, set verification_status=pending",UPDATE,customer,"{""verification_status"": ""pending""}","{""account_status"": ""unverified""}",2,SYNTHETIC
+1089,get orders with express shipping,READ,order,{},"{""shipping_type"": ""express""}",1,SYNTHETIC
+1090,delete projects that are on hold,DELETE,project,{},"{""status"": ""on hold""}",1,SYNTHETIC
+1091,"update tasks with no assignee, set assignee=Default Team",UPDATE,task,"{""assignee"": ""Default Team""}","{""assignee"": ""none""}",2,SYNTHETIC
+1092,show events with an online option,READ,event,{},"{""online_option"": ""true""}",1,SYNTHETIC
+1093,delete feedback marked as spam,DELETE,feedback,{},"{""spam_status"": ""true""}",1,SYNTHETIC
+1094,"update users with pending email verification, set verification_sent=true",UPDATE,user,"{""verification_sent"": ""true""}","{""email_verification_status"": ""pending""}",2,SYNTHETIC
+1095,get reports generated weekly,READ,report,{},"{""frequency"": ""weekly""}",1,SYNTHETIC
+1096,delete documents that are outdated,DELETE,document,{},"{""status"": ""outdated""}",1,SYNTHETIC
+1097,"update movies with critical acclaim, set Rotten_Tomatoes_score=high",UPDATE,movie,"{""Rotten_Tomatoes_score"": ""high""}","{""critical_acclaim"": ""true""}",2,SYNTHETIC
+1098,show songs on trending charts,READ,song,{},"{""trending_status"": ""true""}",1,SYNTHETIC
+1099,delete albums with low sales,DELETE,album,{},"{""sales_status"": ""low""}",1,SYNTHETIC
+1100,"update playlists with no cover art, set default_cover=true",UPDATE,playlist,"{""default_cover"": ""true""}","{""cover_art"": ""none""}",2,SYNTHETIC
+1101,get podcasts with a large following,READ,podcast,{},"{""follower_count"": ""large""}",1,SYNTHETIC
+1102,delete recipes with complex instructions,DELETE,recipe,{},"{""instruction_complexity"": ""complex""}",1,SYNTHETIC
+1103,"update ingredients with low stock, set reorder_needed=true",UPDATE,ingredient,"{""reorder_needed"": ""true""}","{""stock_level"": ""low""}",2,SYNTHETIC
+1104,show restaurants with a Michelin star,READ,restaurant,{},"{""michelin_star"": ""true""}",1,SYNTHETIC
+1105,delete cars listed for salvage,DELETE,car,{},"{""listing_status"": ""salvage""}",1,SYNTHETIC
+1106,"update houses with recent renovations, set last_renovation_date=2024-12-01",UPDATE,house,"{""last_renovation_date"": ""2024-12-01""}","{""recent_renovation"": ""true""}",2,SYNTHETIC
+1107,get pets that are house-trained,READ,pet,{},"{""house_trained"": ""true""}",1,SYNTHETIC
+1108,delete plants with signs of disease,DELETE,plant,{},"{""health_status"": ""diseased""}",1,SYNTHETIC
+1109,"update computers with extended warranty, set service_agreement=active",UPDATE,computer,"{""service_agreement"": ""active""}","{""extended_warranty"": ""true""}",2,SYNTHETIC
+1110,show phones with biometric security,READ,phone,{},"{""security_features"": ""biometric""}",1,SYNTHETIC
+1111,delete appliances consuming too much power,DELETE,appliance,{},"{""power_consumption_status"": ""high""}",1,SYNTHETIC
+1112,"update clothing items in seasonal sale, set sale_price=reduced",UPDATE,clothing,"{""sale_price"": ""reduced""}","{""sale_status"": ""seasonal""}",2,SYNTHETIC
+1113,get footwear made from sustainable materials,READ,footwear,{},"{""material_sustainability"": ""high""}",1,SYNTHETIC
+1114,delete furniture that is custom-made,DELETE,furniture,{},"{""custom_made"": ""true""}",1,SYNTHETIC
+1115,"update buildings with historical value, set preservation_status=ongoing",UPDATE,building,"{""preservation_status"": ""ongoing""}","{""historical_value"": ""true""}",2,SYNTHETIC
+1116,show devices with active subscriptions,READ,device,{},"{""subscription_status"": ""active""}",1,SYNTHETIC
+1117,delete software with critical security vulnerabilities,DELETE,software,{},"{""security_vulnerabilities"": ""critical""}",1,SYNTHETIC
+1118,"update games with upcoming DLC, set DLC_announced=true",UPDATE,game,"{""DLC_announced"": ""true""}","{""upcoming_DLC"": ""true""}",2,SYNTHETIC
+1119,get consoles with limited edition bundles,READ,console,{},"{""edition_type"": ""limited""}",1,SYNTHETIC
+1120,delete artworks with disputed ownership,DELETE,artwork,{},"{""ownership_status"": ""disputed""}",1,SYNTHETIC
+1121,"update museums with public funding, set funding_status=stable",UPDATE,museum,"{""funding_status"": ""stable""}","{""funding_source"": ""public""}",2,SYNTHETIC
+1122,show monuments receiving high tourist traffic,READ,monument,{},"{""tourist_traffic"": ""high""}",1,SYNTHETIC
+1123,delete landmarks that are temporarily closed,DELETE,landmark,{},"{""status"": ""temporarily closed""}",1,SYNTHETIC
+1124,"update countries with developing economies, set aid_program=active",UPDATE,country,"{""aid_program"": ""active""}","{""economic_status"": ""developing""}",2,SYNTHETIC
+1125,get cities with a vibrant nightlife,READ,city,{},"{""nightlife_vibrancy"": ""high""}",1,SYNTHETIC
+1126,delete persons with criminal records,DELETE,person,{},"{""criminal_record"": ""true""}",1,SYNTHETIC
+1127,"update animals in captivity, set enclosure_size=larger",UPDATE,animal,"{""enclosure_size"": ""larger""}","{""captivity_status"": ""true""}",2,SYNTHETIC
+1128,show planets with extreme weather,READ,planet,{},"{""weather_condition"": ""extreme""}",1,SYNTHETIC
+1129,delete stars that are dying,DELETE,star,{},"{""life_stage"": ""dying""}",1,SYNTHETIC
+1130,"update galaxies with active galactic nuclei, set AGN_research=ongoing",UPDATE,galaxy,"{""AGN_research"": ""ongoing""}","{""active_galactic_nuclei"": ""true""}",2,SYNTHETIC
+1131,get universe with ongoing expansion,READ,universe,{},"{""expansion_status"": ""ongoing""}",1,SYNTHETIC
+1132,delete instruments that are broken,DELETE,instrument,{},"{""condition"": ""broken""}",1,SYNTHETIC
+1133,"update paintings with conservation needs, set conservation_status=high priority",UPDATE,painting,"{""conservation_status"": ""high priority""}","{""conservation_needs"": ""true""}",2,SYNTHETIC
+1134,add a student with scholarship=full,ADD,student,"{""scholarship"": ""full""}",{},1,SYNTHETIC
+1135,add subject with exam_type=final,ADD,subject,"{""exam_type"": ""final""}",{},1,SYNTHETIC
+1136,add teacher with teaching_experience=10 years,ADD,teacher,"{""teaching_experience"": ""10 years""}",{},1,SYNTHETIC
+1137,add outcome with approval_status=approved,ADD,outcome,"{""approval_status"": ""approved""}",{},1,SYNTHETIC
+1138,add invoice with payment_due_date=2025-07-20,ADD,invoice,"{""payment_due_date"": ""2025-07-20""}",{},1,SYNTHETIC
+1139,add test with date_administered=2025-06-10,ADD,test,"{""date_administered"": ""2025-06-10""}",{},1,SYNTHETIC
+1140,add article with number_of_citations=50,ADD,article,"{""number_of_citations"": ""50""}",{},1,SYNTHETIC
+1141,add course with duration=16 weeks,ADD,course,"{""duration"": ""16 weeks""}",{},1,SYNTHETIC
+1142,add book with binding_type=hardcover,ADD,book,"{""binding_type"": ""hardcover""}",{},1,SYNTHETIC
+1143,add employee with start_date=2020-01-01,ADD,employee,"{""start_date"": ""2020-01-01""}",{},1,SYNTHETIC
+1144,add product with customer_rating=4.5,ADD,product,"{""customer_rating"": ""4.5""}",{},1,SYNTHETIC
+1145,add customer with contact_preference=phone,ADD,customer,"{""contact_preference"": ""phone""}",{},1,SYNTHETIC
+1146,add order with delivery_address_type=residential,ADD,order,"{""delivery_address_type"": ""residential""}",{},1,SYNTHETIC
+1147,add project with current_phase=development,ADD,project,"{""current_phase"": ""development""}",{},1,SYNTHETIC
+1148,add task with due_time=5:00 PM,ADD,task,"{""due_time"": ""5:00 PM""}",{},1,SYNTHETIC
+1149,add event with virtual_option=true,ADD,event,"{""virtual_option"": ""true""}",{},1,SYNTHETIC
+1150,add feedback with status=new,ADD,feedback,"{""status"": ""new""}",{},1,SYNTHETIC
+1151,add user with signup_date=2022-08-01,ADD,user,"{""signup_date"": ""2022-08-01""}",{},1,SYNTHETIC
+1152,add report with data_range=last quarter,ADD,report,"{""data_range"": ""last quarter""}",{},1,SYNTHETIC
+1153,add document with version_number=2.0,ADD,document,"{""version_number"": ""2.0""}",{},1,SYNTHETIC
+1154,add movie with streaming_platform=Netflix,ADD,movie,"{""streaming_platform"": ""Netflix""}",{},1,SYNTHETIC
+1155,add song with music_video=true,ADD,song,"{""music_video"": ""true""}",{},1,SYNTHETIC
+1156,add album with format=digital,ADD,album,"{""format"": ""digital""}",{},1,SYNTHETIC
+1157,add playlist with collaborative_editing=true,ADD,playlist,"{""collaborative_editing"": ""true""}",{},1,SYNTHETIC
+1158,add podcast with guest_speaker=Dr. Neil deGrasse Tyson,ADD,podcast,"{""guest_speaker"": ""Dr. Neil deGrasse Tyson""}",{},1,SYNTHETIC
+1159,add recipe with dietary_restrictions=vegetarian,ADD,recipe,"{""dietary_restrictions"": ""vegetarian""}",{},1,SYNTHETIC
+1160,add ingredient with storage_temperature=room temperature,ADD,ingredient,"{""storage_temperature"": ""room temperature""}",{},1,SYNTHETIC
+1161,add restaurant with outdoor_seating=true,ADD,restaurant,"{""outdoor_seating"": ""true""}",{},1,SYNTHETIC
+1162,add car with drive_type=AWD,ADD,car,"{""drive_type"": ""AWD""}",{},1,SYNTHETIC
+1163,add house with property_type=single-family,ADD,house,"{""property_type"": ""single-family""}",{},1,SYNTHETIC
+1164,add pet with vaccination_record_up_to_date=true,ADD,pet,"{""vaccination_record_up_to_date"": ""true""}",{},1,SYNTHETIC
+1165,add plant with bloom_season=spring,ADD,plant,"{""bloom_season"": ""spring""}",{},1,SYNTHETIC
+1166,add computer with storage_capacity=1TB,ADD,computer,"{""storage_capacity"": ""1TB""}",{},1,SYNTHETIC
+1167,add phone with operating_system=Android,ADD,phone,"{""operating_system"": ""Android""}",{},1,SYNTHETIC
+1168,add appliance with smart_features_enabled=true,ADD,appliance,"{""smart_features_enabled"": ""true""}",{},1,SYNTHETIC
+1169,add clothing with wash_instructions='Machine wash cold',ADD,clothing,"{""wash_instructions"": ""Machine wash cold""}",{},1,SYNTHETIC
+1170,add footwear with closure=velcro,ADD,footwear,"{""closure"": ""velcro""}",{},1,SYNTHETIC
+1171,add furniture with assembly_difficulty=easy,ADD,furniture,"{""assembly_difficulty"": ""easy""}",{},1,SYNTHETIC
+1172,add building with number_of_units=50,ADD,building,"{""number_of_units"": ""50""}",{},1,SYNTHETIC
+1173,add device with connectivity_type=Bluetooth,ADD,device,"{""connectivity_type"": ""Bluetooth""}",{},1,SYNTHETIC
+1174,add software with subscription_model=monthly,ADD,software,"{""subscription_model"": ""monthly""}",{},1,SYNTHETIC
+1175,add game with minimum_age_rating=10+,ADD,game,"{""minimum_age_rating"": ""10+""}",{},1,SYNTHETIC
+1176,add console with backward_compatibility=true,ADD,console,"{""backward_compatibility"": ""true""}",{},1,SYNTHETIC
+1177,add artwork with historical_period=Renaissance,ADD,artwork,"{""historical_period"": ""Renaissance""}",{},1,SYNTHETIC
+1178,add museum with visitor_count_per_year=5 million,ADD,museum,"{""visitor_count_per_year"": ""5 million""}",{},1,SYNTHETIC
+1179,add monument with construction_material=stone,ADD,monument,"{""construction_material"": ""stone""}",{},1,SYNTHETIC
+1180,add landmark with tourism_rating=5 stars,ADD,landmark,"{""tourism_rating"": ""5 stars""}",{},1,SYNTHETIC
+1181,add country with government_type=republic,ADD,country,"{""government_type"": ""republic""}",{},1,SYNTHETIC
+1182,add city with average_rainfall=1000mm,ADD,city,"{""average_rainfall"": ""1000mm""}",{},1,SYNTHETIC
+1183,add person with preferred_communication=email,ADD,person,"{""preferred_communication"": ""email""}",{},1,SYNTHETIC
+1184,add animal with average_height=1.5m,ADD,animal,"{""average_height"": ""1.5m""}",{},1,SYNTHETIC
+1185,add planet with discovery_method=transit,ADD,planet,"{""discovery_method"": ""transit""}",{},1,SYNTHETIC
+1186,add star with distance_from_sun=10 light-years,ADD,star,"{""distance_from_sun"": ""10 light-years""}",{},1,SYNTHETIC
+1187,add galaxy with current_redshift=0.01,ADD,galaxy,"{""current_redshift"": ""0.01""}",{},1,SYNTHETIC
+1188,add universe with cosmological_constant=positive,ADD,universe,"{""cosmological_constant"": ""positive""}",{},1,SYNTHETIC
+1189,add instrument with case_included=true,ADD,instrument,"{""case_included"": ""true""}",{},1,SYNTHETIC
+1190,add painting with condition=excellent,ADD,painting,"{""condition"": ""excellent""}",{},1,SYNTHETIC
+1191,add sculpture with installation_location=outdoor,ADD,sculpture,"{""installation_location"": ""outdoor""}",{},1,SYNTHETIC
