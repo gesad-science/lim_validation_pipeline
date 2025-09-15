@@ -22,6 +22,9 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+    - pgadmin_data:/var/lib/pgadmin
+
     ports:
       - "8081:80"
     depends_on:
@@ -36,7 +39,11 @@ services:
       - postgres
     environment:
       DATABASE_URL: postgresql+psycopg2://user:password@postgres:5432/data_tables
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - .:/app
 volumes:
     postgres_data:
+    pgadmin_data:
+
